@@ -1,12 +1,10 @@
 # Activity: Using Rivanna
 
-::: {.callout}
-
+::: callout
 **Goal:** Create your course directory structure on Rivanna.
+:::
 
-::: 
-
-After reading the previous documents on [Rivanna](../../topics/rivanna.qmd) and [Unix](../../topics/unix.qmd), try this activity to get acquainted with the Rivanna high-performance computing cluster at UVA.
+After reading the previous documents on [Rivanna](https://ontoligent.github.io/DS5100-book/topics/rivanna.html) and [Unix](https://ontoligent.github.io/DS5100-book/topics/unix.html), try this activity to get acquainted with the Rivanna high-performance computing cluster at UVA.
 
 To get started, go to [OpenOnDemand Dashboard page](https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard) and from the main menu select Clusters → Rivanna Shell Access.
 
@@ -39,4 +37,4 @@ Note that you can use the tab key to complete path and command names as you type
 
 You don't have to, but it would be a good idea to create subdirectories for any of your courses that use Rivanna.
 
-More information about Unix shell commands can be found the document [Unix Shell Commands](../../topics/unix.qmd).
+More information about Unix shell commands can be found the document [Unix Shell Commands](https://ontoligent.github.io/DS5100-book/topics/unix.html).
