@@ -16,7 +16,7 @@ which python
 
 This will show you the "path" to a python interpreter. For example:
 
-![](../../media/which-python.png)
+![](../media/which-python.png)
 
 If you do not see "anaconda" in that path, then run the following command:
 
@@ -42,7 +42,7 @@ From the command line, enter python
 
 You should get the Python Shell:
 
-![](../../media/python-prompt.png)
+![](../media/python-prompt.png)
 
 This is also called the Python standard REPL, which stands for "Read-Eval-Print Loop".
 

@@ -7,7 +7,7 @@ Go the OnDemand site to access Rivanna. As a reminder, the URL is [https://rivan
 From the Interactive Apps menu, select JupyterLab and fill out the form to initiate a new session. Your form should have the following values:
 
 <div style="border: 1px solid gray;">
-![](../../media/jupyter-on-rivanna-form.png)
+![](../media/jupyter-on-rivanna-form.png)
 </div>
 
 ::: {.callout-tip}
