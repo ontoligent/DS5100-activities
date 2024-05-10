@@ -1,0 +1,6 @@
+project:
+  title: "{{< var site_title >}}"
+  output-dir: docs
+
+
+
