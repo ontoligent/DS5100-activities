@@ -1,6 +1,23 @@
 project:
   title: "{{< var site_title >}}"
   output-dir: docs
+  type: website
 
+website:
+  title: "DS 5100 Activities"
+  navbar:
+    left:    
+      - href: activities/M01-01-Using-Rivanna.qmd
+        text: "M01 Activity 1: Using Rivanna"
+      - href: activities/M01-02-Activity-GitHub.qmd
+        text: "M01 Activity 2: Git and GitHub"
+      - href: activities/M02-01-Activity-Hello-World.qmd
+        text: "M02 Activity 1: Hello, World!"
+      - href: activities/M02-02-Activity-JupyterLab-on-Rivanna.qmd
+        text: "M02 Activity 2: JupyterLab on Rivanna"
 
-
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

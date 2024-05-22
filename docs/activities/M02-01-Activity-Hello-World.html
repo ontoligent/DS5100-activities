@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">DS 5100 Activities</span>
     </a>
   </div>
@@ -89,19 +123,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./activities/M01-01-Using-Rivanna.html"> 
+    <a class="nav-link" href="../activities/M01-01-Using-Rivanna.html"> 
 <span class="menu-text">M01 Activity 1: Using Rivanna</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./activities/M01-02-Activity-GitHub.html"> 
+    <a class="nav-link" href="../activities/M01-02-Activity-GitHub.html"> 
 <span class="menu-text">M01 Activity 2: Git and GitHub</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./activities/M02-01-Activity-Hello-World.html"> 
+    <a class="nav-link active" href="../activities/M02-01-Activity-Hello-World.html" aria-current="page"> 
 <span class="menu-text">M02 Activity 1: Hello, World!</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./activities/M02-02-Activity-JupyterLab-on-Rivanna.html"> 
+    <a class="nav-link" href="../activities/M02-02-Activity-JupyterLab-on-Rivanna.html"> 
 <span class="menu-text">M02 Activity 2: JupyterLab on Rivanna</span></a>
   </li>  
 </ul>
@@ -116,32 +150,75 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#activity-hello-world" id="toc-activity-hello-world" class="nav-link active" data-scroll-target="#activity-hello-world">Activity: Hello, World!</a>
+  <ul class="collapse">
+  <li><a href="#which-python" id="toc-which-python" class="nav-link" data-scroll-target="#which-python">Which Python?</a></li>
+  <li><a href="#aside" id="toc-aside" class="nav-link" data-scroll-target="#aside">Aside</a></li>
+  <li><a href="#the-python-interactive-shell" id="toc-the-python-interactive-shell" class="nav-link" data-scroll-target="#the-python-interactive-shell">The Python Interactive Shell</a></li>
+  <li><a href="#try-this" id="toc-try-this" class="nav-link" data-scroll-target="#try-this">Try <code>this</code></a></li>
+  <li><a href="#running-python-files" id="toc-running-python-files" class="nav-link" data-scroll-target="#running-python-files">Running Python Files</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">DS 5100 Activities</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
+<section id="activity-hello-world" class="level1">
+<h1>Activity: Hello, World!</h1>
+<p>In this activity, you will run Python from the command line and become acquainted with its most basic mode of operation.</p>
+<p>To get started, log onto the Rivanna shell and move into in the course directory you created for this class.</p>
+<section id="which-python" class="level2">
+<h2 class="anchored" data-anchor-id="which-python">Which Python?</h2>
+<p>Once you are in Rivanna, you will want to know which version of Python you have installed as the default.</p>
+<p>To find out, from the command line type:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span> python</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will show you the “path” to a python interpreter. For example:</p>
+<p><img src="../media/which-python.png" class="img-fluid"></p>
+<p>If you do not see “anaconda” in that path, then run the following command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load anaconda</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will update your environment to use Anaconda’s distribution of Python.</p>
+<p>After running the command, enter the command to see which pythion is being used to confirm that it is the one from Ancaconda.</p>
+</section>
+<section id="aside" class="level2">
+<h2 class="anchored" data-anchor-id="aside">Aside</h2>
+<p>Note that you can use <code>module</code> to run other programs on your Rivanna account.</p>
+<p>Type <code>module list</code> to see which programs have already been installed on your account.</p>
+<p>Type <code>module spider</code> to see all the programs you can install.</p>
+</section>
+<section id="the-python-interactive-shell" class="level2">
+<h2 class="anchored" data-anchor-id="the-python-interactive-shell">The Python Interactive Shell</h2>
+<p>From the command line, enter python</p>
+<p>You should get the Python Shell:</p>
+<p><img src="../media/python-prompt.png" class="img-fluid"></p>
+<p>This is also called the Python standard REPL, which stands for “Read-Eval-Print Loop”.</p>
+<p>Make sure you see that you are using version 3 of Python.</p>
+<p>If you see Python 2, exit the shell by entering <code>quit()</code> and try again by entering python3 at the command line.</p>
+<p>At the <code>&gt;&gt;&gt;</code> prompt type <code>print("Hello, World!")</code> and press return.</p>
+<p>If you’ve never used Python, you’ve just completed an important ritual. If you have used Python, well, you did it again :-)</p>
+</section>
+<section id="try-this" class="level2">
+<h2 class="anchored" data-anchor-id="try-this">Try <code>this</code></h2>
+<p>Now, enter following line at the prompt and press return:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> this</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>What do you see?</p>
+<p>To exit the Python Shell, enter <code>quit()</code> or <code>exit()</code> and hit return.</p>
+</section>
+<section id="running-python-files" class="level2">
+<h2 class="anchored" data-anchor-id="running-python-files">Running Python Files</h2>
+<p>Now create a file called <code>hello.py</code> using the command line editor <code>nano</code>. Enter the same commands you used above.</p>
+<p>Then run it from the command line by directly invoking the Python interpreter python.</p>
 
-    
-  
-    
-  </div>
-  
 
-
-</header>
-
-
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
