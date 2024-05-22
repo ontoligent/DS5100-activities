@@ -20,7 +20,7 @@ If you have never used the command line, have no fear! Just enter the commands e
 
 **Now, create a directory for your course and this course by entering the following commands:**
 
-```         
+```bash
 cd Documents 
 mdkir MSDS 
 cd MSDS 
