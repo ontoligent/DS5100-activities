@@ -1,6 +1,4 @@
----
-title: "Activity: Using Git and GitHub"
----
+# Activity: Using Git and GitHub
 
 ::: callout
 **Goal:** Use Git and GitHub to put course materials on your Rivanna account.

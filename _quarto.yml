@@ -5,7 +5,7 @@ project:
 
 website:
   title: "DS 5100 Activities"
-  navbar:
+  sidebar:
     left:    
       - href: activities/M01-01-Using-Rivanna.qmd
         text: "M01 Activity 1: Using Rivanna"
@@ -14,7 +14,7 @@ website:
       - href: activities/M02-01-Activity-Hello-World.qmd
         text: "M02 Activity 1: Hello, World!"
       - href: activities/M02-02-Activity-JupyterLab-on-Rivanna.qmd
-        text: "M02 Activity 2: JupyterLab on Rivanna"
+        text: "M02 Activity 2: Jupyter Lab on Rivanna"
 
 format:
   html:
