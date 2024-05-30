@@ -6,7 +6,10 @@ project:
 website:
   title: "DS 5100 Activities"
   sidebar:
-    left:    
+    style: "docked"
+    search: true
+    contents:
+    # left:    
       - href: activities/M01-01-Using-Rivanna.qmd
         text: "M01 Activity 1: Using Rivanna"
       - href: activities/M01-02-Activity-GitHub.qmd
