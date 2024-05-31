@@ -21,7 +21,7 @@ Also, before you get started, follow [these instructions](https://ontoligent.git
 
 ***Fork*** **the course GitHub hosted repository ("repo") to your GitHub account.**
 
-Go to [{{< var github_url >}}](%7B%7B%3C%20var%20github_url%20%3E%7D%7D) in your web browser.
+Go to [{{< var github_url >}}]({{< var github_url >}}) in your web browser.
 
 ::: callout-note
 This is the course repo --- all of the course notebooks and other code will be available here. Each week, you will access your course materials here.
