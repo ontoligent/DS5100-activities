@@ -19,12 +19,14 @@ We assume you have already created a GitHub account.
 
 Also, before you get started, follow [these instructions](https://ontoligent.github.io/DS5100-book/topics/setting-up-ssh.html) to set an SSH key. You can create this on both your computer and Rivanna, but for the assignment you need only create it on Rivanna.
 
+## Steps
+
 ***Fork*** **the course GitHub hosted repository ("repo") to your GitHub account.**
 
 Go to [{{< var github_url >}}]({{< var github_url >}}) in your web browser.
 
 ::: callout-note
-This is the course repo --- all of the course notebooks and other code will be available here. Each week, you will access your course materials here.
+This is the course activities repo --- it will be used for activities and answer keys.
 :::
 
 Click on the Fork icon in the upper right and follow the prompts to finish the process.
