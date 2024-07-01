@@ -1,0 +1,8 @@
+test_01_is_numCoursincremented_correctly (__main__.EnrollInTestCase.test_01_is_numCoursincremented_correctly) ... ok
+test_02_is_course_added (__main__.EnrollInTestCase.test_02_is_course_added) ... ok
+test_03_is_course_not_added (__main__.EnrollInTestCase.test_03_is_course_not_added) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
