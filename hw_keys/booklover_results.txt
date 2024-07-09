@@ -1,0 +1,11 @@
+test_1_add_book (__main__.BookLoverTestSuite) ... ok
+test_2_add_book (__main__.BookLoverTestSuite) ... ok
+test_3_has_read (__main__.BookLoverTestSuite) ... ok
+test_4_has_read (__main__.BookLoverTestSuite) ... ok
+test_5_num_books_read (__main__.BookLoverTestSuite) ... ok
+test_6_fav_books (__main__.BookLoverTestSuite) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.040s
+
+OK
