@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DS 5100 Activities</title>
+<title>DS 5100 Activities - M09 Exercises</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,7 +114,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/M01-01-Using-Rivanna.html">M01</a></li><li class="breadcrumb-item"><a href="../activities/M01-02-Activity-GitHub.html">Activity: Using Git and GitHub</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      DS 5100 Activities
+      </li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -156,7 +158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/M01-02-Activity-GitHub.html" class="sidebar-item-text sidebar-link active">
+  <a href="../activities/M01-02-Activity-GitHub.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Activity: Using Git and GitHub</span></a>
   </div>
 </li>
@@ -195,163 +197,157 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#activity-using-git-and-github" id="toc-activity-using-git-and-github" class="nav-link active" data-scroll-target="#activity-using-git-and-github">Activity: Using Git and GitHub</a>
-  <ul class="collapse">
-  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a></li>
-  <li><a href="#going-forward" id="toc-going-forward" class="nav-link" data-scroll-target="#going-forward">Going Forward</a></li>
-  </ul></li>
+  <li><a href="#challenge" id="toc-challenge" class="nav-link active" data-scroll-target="#challenge">Challenge</a></li>
+  <li><a href="#synopsis" id="toc-synopsis" class="nav-link" data-scroll-target="#synopsis">Synopsis</a></li>
+  <li><a href="#create-repo" id="toc-create-repo" class="nav-link" data-scroll-target="#create-repo">Create Repo</a></li>
+  <li><a href="#create-package-directory-and-files" id="toc-create-package-directory-and-files" class="nav-link" data-scroll-target="#create-package-directory-and-files">Create Package Directory and Files</a></li>
+  <li><a href="#create-the-module" id="toc-create-the-module" class="nav-link" data-scroll-target="#create-the-module">Create the Module</a></li>
+  <li><a href="#edit-__init__.py" id="toc-edit-__init__.py" class="nav-link" data-scroll-target="#edit-__init__.py">Edit <code>__init__.py</code></a></li>
+  <li><a href="#create-a-setup-file" id="toc-create-a-setup-file" class="nav-link" data-scroll-target="#create-a-setup-file">Create a setup file</a></li>
+  <li><a href="#install-your-package" id="toc-install-your-package" class="nav-link" data-scroll-target="#install-your-package">Install your package</a></li>
+  <li><a href="#test-it-out" id="toc-test-it-out" class="nav-link" data-scroll-target="#test-it-out">Test it out</a></li>
+  <li><a href="#really-test-it" id="toc-really-test-it" class="nav-link" data-scroll-target="#really-test-it">Really Test It</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">M09 Exercises</h1>
+</div>
 
 
 
-<section id="activity-using-git-and-github" class="level1">
-<h1>Activity: Using Git and GitHub</h1>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Goal:</strong> Use Git and GitHub to put course materials on your Rivanna account.</p>
-</div>
-</div>
-</div>
-<p>In this activity, you will go through steps of using Git and GitHub covered in <a href="https://ontoligent.github.io/DS5100-book/topics/git-and-github.html">the reading on GitHub</a>. At this point, you also should be able check off the following items:</p>
-<ul>
-<li>Understand the difference between Git and GitHub.</li>
-<li>Understand the purpose of Git and Github for data science work.</li>
-<li>Ensure Git is installed on your computer.</li>
-<li>Understand how to find a repository on GitHub.</li>
-</ul>
-<p>Let’s apply and extend this knowledge now with our course repo.</p>
-<p>Be sure you are inside the course directory on Rivanna we created earlier.</p>
-<p>We assume you have already created a GitHub account.</p>
-<p>Also, before you get started, follow <a href="https://ontoligent.github.io/DS5100-book/topics/setting-up-ssh.html">these instructions</a> to set an SSH key. You can create this on both your computer and Rivanna, but for the assignment you need only create it on Rivanna.</p>
-<section id="steps" class="level2">
-<h2 class="anchored" data-anchor-id="steps">Steps</h2>
-<p><strong><em>Fork</em></strong> <strong>the course GitHub hosted repository (“repo”) to your GitHub account.</strong></p>
-<p>Go to <a href="https://github.com/ontoligent/DS5100-book">https://github.com/ontoligent/DS5100-book</a> in your web browser.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is the course activities repo — it will be used for activities and answer keys.</p>
-</div>
-</div>
-<p>Click on the Fork icon in the upper right and follow the prompts to finish the process.</p>
-<p>You should end up at the web page of your newly forked repo.</p>
-<p>You will now have a copy of the repo in your GitHub account.</p>
-<p><strong><em>Clone</em></strong> <strong>the forked repo for this course inside of your course directory on Rivanna.</strong></p>
-<p>Find the green Code button and click on it. You should see something like this:</p>
-<p><img src="../media/git-clone.png" height="400"></p>
-<p>Make sure you have selected the SSH option.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Note: This requires that you have SSH set up.</p>
-</div>
-</div>
-<p>Then click on the copy icon and paste the value into the following command:</p>
-<pre class="bashco"><code>git clone https://github.com:&lt;github_user_name&gt;/DS5100-2024-08-O.git</code></pre>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be sure to clone the repo from <em>your</em> GitHub account, replacing <code>&lt;github_user_name&gt;</code> with your GitHub user name. Do not just cut-and-paste the line above!</p>
-</div>
-</div>
-<p>You now have a copy the course repo to your account on Rivanna.</p>
-<p>This will be the directory you created in your pre-class activities under Documents/.</p>
-<p><strong><em>Create</em></strong> <strong>a new file in your newly cloned repo.</strong></p>
-<p>Go to your command line window on Rivanna.</p>
-<p>Use <code>cd</code> to move into the directory just created by the clone operation.</p>
-<p>Move into the directory <code>activities/hello</code></p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Make sure you are in this directory before proceeding.</p>
-</div>
-</div>
-<p>If you get lost – for example if you moved around the file system before this step – you can cd to the absolute path:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Documents/MSDS/DS5100/DS5100-2024-08-O/activities/hello </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note that the tilde sign <code>~</code> stands for the path to your home directory.</p>
-<p>Using the file editor on Rivanna, create and save new file called <code>&lt;userid&gt;_hello.txt</code>, replacing <code>&lt;userid&gt;</code> with your actual user ID, e.g.&nbsp;<code>rca2t_hello.txt</code>.</p>
-<p>In the file, introduce yourself by answering the question: What is the most recent film you watched and enjoyed?</p>
-<p>Save the file.</p>
-<p><strong><em>Add</em></strong> <strong>and <em>commit</em> the changes you made.</strong></p>
-<p>Now do the following:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="op">&lt;</span>userid<span class="op">&gt;</span>_hello.txt</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Created file for class"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong><em>Push</em></strong> <strong>your new file to the repo on GitHub.</strong></p>
-<p>Since you have SSH set up, you can issue the following command without having to enter a password:</p>
-<!--
-Before proceeding, you will need to create personal access token to be able to write to your repo on GitHub. To get one, follow the instructions here --- [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+<div class="quarto-title-meta">
 
-Once you have created and copied your PAT to a safe place, do the following:
--->
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<!-- 
-When prompted for a password, use your PAT instead. 
+    
+  
+    
+  </div>
+  
 
-Note: A more efficient way to work with GitHub is to use SSH. You are free to use this option if you are comfortable following through with [the instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
--->
-<p><strong>Create a <em>Pull Request</em></strong></p>
-<p>Finally, make a pull request to have your file added to the original site. To do this, follow these steps:</p>
-<p>Click on the “Pull requests” menu item (see image below) on the web page for your repo.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../media/pull-request-button.jpg" class="img-fluid figure-img"></p>
-<figcaption>Image of pull request button on GitHub</figcaption>
-</figure>
-</div>
-<p>Click on the green “New pull request” button.</p>
-<p>Click on the green “Create pull request” button.</p>
-<p>Give the request the title “In-class activity” and then press the green “Create pull request” button at the bottom of the form.</p>
-<p>Now the ball is in the instructor’s court to merge the request with the original. If you put your file in the right place and named it properly, it will be merged.</p>
+
+</header>
+
+
+<p>DS 5100 | Summer 2024 | Residential</p>
+<section id="challenge" class="level1">
+<h1>Challenge</h1>
+<p>Create and publish on GitHub a package containing a single module with a single function.</p>
 </section>
-<section id="going-forward" class="level2">
-<h2 class="anchored" data-anchor-id="going-forward">Going Forward</h2>
-<p>During the semester, you will not be making pull requests to submit your work. We do it here to demonstrate the concept since it is so basic to working with GitHub in the real world.</p>
-<p>Instead of making pull requests, you will be using a separate repository for your work So, you will be working with two repositories going forard:</p>
+<section id="synopsis" class="level1">
+<h1>Synopsis</h1>
 <ol type="1">
-<li><p><strong>The Course Repo</strong>, which is where you will find course materials, such as homework keys and exercises after the classes in which they are used. This should be <a href="https://ontoligent.github.io/DS5100-book/topics/refreshing-the-course-repo.html">updated each day</a>.</p></li>
-<li><p><strong>Your Assessments Repo</strong>, which is where you will be your finished work as assigned.</p></li>
-<li><p><strong>The Book Repo</strong>, which is where you will find the textbook for this course along with all of the notebooks in it. You may choose to clone or fork this, or you may download individual notebooks from the site as needed.</p></li>
+<li><strong>Create a new git repo for your package</strong>.</li>
+<li>Create and edit the <strong>required files and directories</strong> for your package.</li>
+<li><strong>Write a module file</strong> in the repo that contains at least one function and save it in the correct directory.</li>
+<li><strong>Stage, commit, and push</strong> all the files you’ve created.</li>
+<li><strong>Install</strong> your package with <code>pip</code>.</li>
+<li>Outside of your package dir, write a script to <strong>test your method</strong>.</li>
+<li>Have someone else clone your repo, install your package and test it.</li>
 </ol>
-
-
 </section>
+<section id="create-repo" class="level1">
+<h1>Create Repo</h1>
+<p>Create a single new repo for your package on GitHib.</p>
+<p>Be sure to choose a license, include a readme, and a select a <code>.gitignore</code> file for Python.</p>
+<p>Clone the repo locally – outside of your course repo.</p>
+<p>The root of the repo will be the project directory.</p>
+</section>
+<section id="create-package-directory-and-files" class="level1">
+<h1>Create Package Directory and Files</h1>
+<p>Create your package directory and file structure for your package.</p>
+<p>Include empty versions of all essential files, including your module file.</p>
+<p>The initial directory structure for your package should look like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">your_package/</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">your_module.py</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">__init__.py</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">setup.py</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>My example looks like this (I named the package <code>demo</code>):</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">demo/</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">jabber.py</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">__init__.py</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">setup.py</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="create-the-module" class="level1">
+<h1>Create the Module</h1>
+<p>Your module just needs to have one function.</p>
+<p>It’s a good idea to make it print something.</p>
+<p>It should also have a docstring.</p>
+<p>Name the file something that reflects the purpose of the function, and any other code that the file will contain.</p>
+<p>Save it.</p>
+<p>in the file <code>jabber.py</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tell_me_something():</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Wise cracking function."""</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Something."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="edit-__init__.py" class="level1">
+<h1>Edit <code>__init__.py</code></h1>
+<p>Put a print statement welcoming the user to your module.</p>
+<p>We don’t normally do this, we’re just demonstrating what it does.</p>
+<p>Inside of <code>__init__.py</code>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Welcome to my module!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="create-a-setup-file" class="level1">
+<h1>Create a setup file</h1>
+<p>Create the <code>setup.py</code> file in the root of the project directory.</p>
+<p>Import what needs to be imported. Hint: you need <code>setuptools</code>.</p>
+<p>Add basic metadata and configuration info about your package.</p>
+<p>Inside of <code>setup.py</code> I put:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> setuptools <span class="im">import</span> setup</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>setup(</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">'Demo'</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    version<span class="op">=</span><span class="st">'0.1'</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">'A simple demonstration package'</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    url<span class="op">=</span><span class="st">'http://github.com/ontoligent/m09-demo'</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    author<span class="op">=</span><span class="st">'R.C. Alvarado'</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    author_email<span class="op">=</span><span class="st">'ontoligent@gmail.com'</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    license<span class="op">=</span><span class="st">'MIT'</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    packages<span class="op">=</span>[<span class="st">'demo'</span>]</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="install-your-package" class="level1">
+<h1>Install your package</h1>
+<p>Run a command from bash to install the script to Python on your system.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We normally run this during development:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here are the results:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rca2t@rivanna$</span> pip install <span class="at">-e</span> .</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Defaulting</span> to user installation because normal site-packages is not writeable</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Obtaining</span> file:///sfs/qumulo/qhome/rca2t/Documents/MSDS/DS5100/m14-demo</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Installing</span> collected packages: Demo</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">Running</span> setup.py develop for Demo</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Successfully</span> installed Demo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We might also have done this:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pip install <span class="op">--</span>user <span class="op">-</span>e .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="test-it-out" class="level1">
+<h1>Test it out</h1>
+<p>Run the file somewhere on your system outside of the repo.</p>
+<p>You can use a python file, a notebook, or the command-line.</p>
+<p>Here is a sample script:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#! /usr/env python3</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> demo.jabber <span class="im">import</span> tell_me_something <span class="im">as</span> tms</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>tms()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And here is the output:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rca2t@rivanna$</span> python ./m14-demo-test.py</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Welcome</span> to Jabber!</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Something.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="really-test-it" class="level1">
+<h1>Really Test It</h1>
+<p>Push your changes to GitHub.</p>
+<p>Clone the repo on another computer.</p>
+<p>Install your package.</p>
+<p>Test it out.</p>
+
+
 </section>
 
 </main> <!-- /main -->

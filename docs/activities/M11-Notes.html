@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DS 5100 Activities</title>
+<title>DS 5100 Activities - M11 Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,7 +57,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -100,7 +100,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -114,7 +146,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/M01-01-Using-Rivanna.html">M01</a></li><li class="breadcrumb-item"><a href="../activities/M01-02-Activity-GitHub.html">Activity: Using Git and GitHub</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      DS 5100 Activities
+      </li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -156,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/M01-02-Activity-GitHub.html" class="sidebar-item-text sidebar-link active">
+  <a href="../activities/M01-02-Activity-GitHub.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Activity: Using Git and GitHub</span></a>
   </div>
 </li>
@@ -195,163 +229,373 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#activity-using-git-and-github" id="toc-activity-using-git-and-github" class="nav-link active" data-scroll-target="#activity-using-git-and-github">Activity: Using Git and GitHub</a>
-  <ul class="collapse">
-  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a></li>
-  <li><a href="#going-forward" id="toc-going-forward" class="nav-link" data-scroll-target="#going-forward">Going Forward</a></li>
-  </ul></li>
+  <li><a href="#installing-an-r-kernel" id="toc-installing-an-r-kernel" class="nav-link active" data-scroll-target="#installing-an-r-kernel">Installing an R Kernel</a></li>
+  <li><a href="#dplyr" id="toc-dplyr" class="nav-link" data-scroll-target="#dplyr">Dplyr</a></li>
+  <li><a href="#floating-point-comparisons" id="toc-floating-point-comparisons" class="nav-link" data-scroll-target="#floating-point-comparisons">Floating Point Comparisons</a></li>
+  <li><a href="#split-apply-combine" id="toc-split-apply-combine" class="nav-link" data-scroll-target="#split-apply-combine">Split-Apply-Combine</a></li>
+  <li><a href="#helpers" id="toc-helpers" class="nav-link" data-scroll-target="#helpers">Helpers</a></li>
+  <li><a href="#joins" id="toc-joins" class="nav-link" data-scroll-target="#joins">Joins</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">M11 Notes</h1>
+</div>
 
 
 
-<section id="activity-using-git-and-github" class="level1">
-<h1>Activity: Using Git and GitHub</h1>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Goal:</strong> Use Git and GitHub to put course materials on your Rivanna account.</p>
-</div>
-</div>
-</div>
-<p>In this activity, you will go through steps of using Git and GitHub covered in <a href="https://ontoligent.github.io/DS5100-book/topics/git-and-github.html">the reading on GitHub</a>. At this point, you also should be able check off the following items:</p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="installing-an-r-kernel" class="level1">
+<h1>Installing an R Kernel</h1>
+<p>You can run R in Jupyter by installing an R kernel.</p>
+<p>Here’s a <a href="M11_00_Rkernel.pdf">how to</a> document to set this up.</p>
+<p>In brief, here’s what you do. First, at the command line:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> r_env r-essentials r-base</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate r_env</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">R</span> <span class="co"># This opens the R shell</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then, in the R shell:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>IRkernel<span class="sc">::</span><span class="fu">installspec</span>(<span class="at">name =</span> <span class="st">'r_env'</span>, <span class="at">displayname =</span> <span class="st">'R Environment'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">quit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now, fire up a Jupyter Lab instance from the OpenOnDemand page and select the kernel when you create a new notebook.</p>
+</section>
+<section id="dplyr" class="level1">
+<h1>Dplyr</h1>
 <ul>
-<li>Understand the difference between Git and GitHub.</li>
-<li>Understand the purpose of Git and Github for data science work.</li>
-<li>Ensure Git is installed on your computer.</li>
-<li>Understand how to find a repository on GitHub.</li>
+<li>A <strong>grammar</strong> of data transformation.</li>
+<li>Treats functions as <strong>verbs</strong> in a vocabulary.</li>
+<li>Similar to <strong>SQL</strong> — <code>SELECT</code>, <code>WHERE</code>, <code>ORDER BY</code>, <code>GROUP BY</code>, etc.
+<ul>
+<li>However, <code>arrange()</code> and <code>mutate()</code> are implicit in SQL as part of the <code>SELECT</code> clause.</li>
+</ul></li>
+<li>Makes use of the <a href="https://magrittr.tidyverse.org/">magrittr</a> <strong>pipes</strong> <code>%&gt;%</code> to connect operations.</li>
+<li>Introduces <strong>a new data structure</strong> – the tibble.</li>
+<li>Part of the <strong>Tidyverse</strong>, a replacement of basic R.</li>
 </ul>
-<p>Let’s apply and extend this knowledge now with our course repo.</p>
-<p>Be sure you are inside the course directory on Rivanna we created earlier.</p>
-<p>We assume you have already created a GitHub account.</p>
-<p>Also, before you get started, follow <a href="https://ontoligent.github.io/DS5100-book/topics/setting-up-ssh.html">these instructions</a> to set an SSH key. You can create this on both your computer and Rivanna, but for the assignment you need only create it on Rivanna.</p>
-<section id="steps" class="level2">
-<h2 class="anchored" data-anchor-id="steps">Steps</h2>
-<p><strong><em>Fork</em></strong> <strong>the course GitHub hosted repository (“repo”) to your GitHub account.</strong></p>
-<p>Go to <a href="https://github.com/ontoligent/DS5100-book">https://github.com/ontoligent/DS5100-book</a> in your web browser.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
+<div id="1acaef9b-94f4-46ef-b2f8-5824b71fceec" class="cell" data-tags="[]" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.3     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>This is the course activities repo — it will be used for activities and answer keys.</p>
+</section>
+<section id="floating-point-comparisons" class="level1">
+<h1>Floating Point Comparisons</h1>
+<p>As with Python, there is a problem with floating point numbers you may encounter when using <code>==</code>.</p>
+<div id="46f58d66-44c8-4d7d-98ea-3423a82e8fb3" class="cell" data-tags="[]" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">2</span>) <span class="sc">^</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">2</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">/</span> <span class="dv">49</span> <span class="sc">*</span> <span class="dv">49</span> <span class="sc">==</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+FALSE
+</div>
+<div class="cell-output cell-output-display">
+FALSE
 </div>
 </div>
-<p>Click on the Fork icon in the upper right and follow the prompts to finish the process.</p>
-<p>You should end up at the web page of your newly forked repo.</p>
-<p>You will now have a copy of the repo in your GitHub account.</p>
-<p><strong><em>Clone</em></strong> <strong>the forked repo for this course inside of your course directory on Rivanna.</strong></p>
-<p>Find the green Code button and click on it. You should see something like this:</p>
-<p><img src="../media/git-clone.png" height="400"></p>
-<p>Make sure you have selected the SSH option.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>Recall that computers use <strong>finite precision arithmetic</strong>, since they can’t store an infinite number of digits.</p>
+<p>This means that that every float you see is an approximation.</p>
+<p>So, instead of relying on <code>==</code>, use <code>near()</code>:</p>
+<div id="2b13bf54-eebc-47a4-b519-808a21363952" class="cell" data-tags="[]" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">near</span>(<span class="fu">sqrt</span>(<span class="dv">2</span>) <span class="sc">^</span> <span class="dv">2</span>,  <span class="dv">2</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">near</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="dv">49</span> <span class="sc">*</span> <span class="dv">49</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+TRUE
 </div>
-<div class="callout-title-container flex-fill">
-Important
+<div class="cell-output cell-output-display">
+TRUE
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Note: This requires that you have SSH set up.</p>
-</div>
-</div>
-<p>Then click on the copy icon and paste the value into the following command:</p>
-<pre class="bashco"><code>git clone https://github.com:&lt;github_user_name&gt;/DS5100-2024-08-O.git</code></pre>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be sure to clone the repo from <em>your</em> GitHub account, replacing <code>&lt;github_user_name&gt;</code> with your GitHub user name. Do not just cut-and-paste the line above!</p>
-</div>
-</div>
-<p>You now have a copy the course repo to your account on Rivanna.</p>
-<p>This will be the directory you created in your pre-class activities under Documents/.</p>
-<p><strong><em>Create</em></strong> <strong>a new file in your newly cloned repo.</strong></p>
-<p>Go to your command line window on Rivanna.</p>
-<p>Use <code>cd</code> to move into the directory just created by the clone operation.</p>
-<p>Move into the directory <code>activities/hello</code></p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Make sure you are in this directory before proceeding.</p>
-</div>
-</div>
-<p>If you get lost – for example if you moved around the file system before this step – you can cd to the absolute path:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Documents/MSDS/DS5100/DS5100-2024-08-O/activities/hello </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note that the tilde sign <code>~</code> stands for the path to your home directory.</p>
-<p>Using the file editor on Rivanna, create and save new file called <code>&lt;userid&gt;_hello.txt</code>, replacing <code>&lt;userid&gt;</code> with your actual user ID, e.g.&nbsp;<code>rca2t_hello.txt</code>.</p>
-<p>In the file, introduce yourself by answering the question: What is the most recent film you watched and enjoyed?</p>
-<p>Save the file.</p>
-<p><strong><em>Add</em></strong> <strong>and <em>commit</em> the changes you made.</strong></p>
-<p>Now do the following:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="op">&lt;</span>userid<span class="op">&gt;</span>_hello.txt</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Created file for class"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong><em>Push</em></strong> <strong>your new file to the repo on GitHub.</strong></p>
-<p>Since you have SSH set up, you can issue the following command without having to enter a password:</p>
-<!--
-Before proceeding, you will need to create personal access token to be able to write to your repo on GitHub. To get one, follow the instructions here --- [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
-
-Once you have created and copied your PAT to a safe place, do the following:
--->
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<!-- 
-When prompted for a password, use your PAT instead. 
-
-Note: A more efficient way to work with GitHub is to use SSH. You are free to use this option if you are comfortable following through with [the instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
--->
-<p><strong>Create a <em>Pull Request</em></strong></p>
-<p>Finally, make a pull request to have your file added to the original site. To do this, follow these steps:</p>
-<p>Click on the “Pull requests” menu item (see image below) on the web page for your repo.</p>
+</section>
+<section id="split-apply-combine" class="level1">
+<h1>Split-Apply-Combine</h1>
+<p>Split-Apply-Combine is a general <strong>pattern</strong> of data transformation.</p>
+<ul>
+<li><strong>SPLIT</strong>: Split up table by observations into groups (smaller dataframes) based on a filter.</li>
+<li><strong>APPLY</strong>: Apply a summary, aka aggregate function to each of the groups, which results in reducing these dataframes to single rows.</li>
+<li><strong>COMBINE</strong>: Compine the collapsed group tables into a single table.</li>
+</ul>
+<p>Examle where a dataframe is split by the values <span class="math inline">\([A,B,C]\)</span> in <code>Col 1</code>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../media/pull-request-button.jpg" class="img-fluid figure-img"></p>
-<figcaption>Image of pull request button on GitHub</figcaption>
+<p><img src="M11-Notes_files/figure-html/becba8e6-fc16-4287-8541-55952fea0889-1-bd3c4b83-e283-4726-84c7-254814c14d03.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
 </figure>
 </div>
-<p>Click on the green “New pull request” button.</p>
-<p>Click on the green “Create pull request” button.</p>
-<p>Give the request the title “In-class activity” and then press the green “Create pull request” button at the bottom of the form.</p>
-<p>Now the ball is in the instructor’s court to merge the request with the original. If you put your file in the right place and named it properly, it will be merged.</p>
+<p>The resulting table with have as its implicit index the unique list of values in the grouping column.</p>
+<p><strong>Simple Example</strong></p>
+<div id="1ac80960-0555-4335-b231-ae24d0831528" class="cell" data-tags="[]" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A data.frame: 6 × 11</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th" scope="col">mpg</th>
+<th data-quarto-table-cell-role="th" scope="col">cyl</th>
+<th data-quarto-table-cell-role="th" scope="col">disp</th>
+<th data-quarto-table-cell-role="th" scope="col">hp</th>
+<th data-quarto-table-cell-role="th" scope="col">drat</th>
+<th data-quarto-table-cell-role="th" scope="col">wt</th>
+<th data-quarto-table-cell-role="th" scope="col">qsec</th>
+<th data-quarto-table-cell-role="th" scope="col">vs</th>
+<th data-quarto-table-cell-role="th" scope="col">am</th>
+<th data-quarto-table-cell-role="th" scope="col">gear</th>
+<th data-quarto-table-cell-role="th" scope="col">carb</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">Mazda RX4</td>
+<td>21.0</td>
+<td>6</td>
+<td>160</td>
+<td>110</td>
+<td>3.90</td>
+<td>2.620</td>
+<td>16.46</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">Mazda RX4 Wag</td>
+<td>21.0</td>
+<td>6</td>
+<td>160</td>
+<td>110</td>
+<td>3.90</td>
+<td>2.875</td>
+<td>17.02</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">Datsun 710</td>
+<td>22.8</td>
+<td>4</td>
+<td>108</td>
+<td>93</td>
+<td>3.85</td>
+<td>2.320</td>
+<td>18.61</td>
+<td>1</td>
+<td>1</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">Hornet 4 Drive</td>
+<td>21.4</td>
+<td>6</td>
+<td>258</td>
+<td>110</td>
+<td>3.08</td>
+<td>3.215</td>
+<td>19.44</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" scope="row">Hornet Sportabout</td>
+<td>18.7</td>
+<td>8</td>
+<td>360</td>
+<td>175</td>
+<td>3.15</td>
+<td>3.440</td>
+<td>17.02</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" scope="row">Valiant</td>
+<td>18.1</td>
+<td>6</td>
+<td>225</td>
+<td>105</td>
+<td>2.76</td>
+<td>3.460</td>
+<td>20.22</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="f4688018-f015-4a4c-9c86-913100ffb822" class="cell" data-tags="[]" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>agg_by_cyl <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(cyl) <span class="sc">%&gt;%</span> <span class="co"># Split</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">avg_mpg =</span> <span class="fu">mean</span>(mpg), <span class="at">avg_hp =</span> <span class="fu">mean</span>(hp)) <span class="co"># Apply and Combine</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="b192cead-9e21-45ba-ac32-d8b064724677" class="cell" data-tags="[]" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>agg_by_cyl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 3 × 3</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">cyl</th>
+<th data-quarto-table-cell-role="th" scope="col">avg_mpg</th>
+<th data-quarto-table-cell-role="th" scope="col">avg_hp</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4</td>
+<td>26.66364</td>
+<td>82.63636</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>19.74286</td>
+<td>122.28571</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>15.10000</td>
+<td>209.21429</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="b49ad376-3206-44bf-b665-d2c8f5c7b62e" class="cell" data-tags="[]" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>agg_by_cyl <span class="ot">&lt;-</span> agg_by_cyl <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">hp_per_cyl =</span> avg_hp <span class="sc">/</span> cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="b7faa4ac-b556-4c34-abf9-7555de371e19" class="cell" data-tags="[]" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>agg_by_cyl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 3 × 4</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">cyl</th>
+<th data-quarto-table-cell-role="th" scope="col">avg_mpg</th>
+<th data-quarto-table-cell-role="th" scope="col">avg_hp</th>
+<th data-quarto-table-cell-role="th" scope="col">hp_per_cyl</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4</td>
+<td>26.66364</td>
+<td>82.63636</td>
+<td>20.65909</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>19.74286</td>
+<td>122.28571</td>
+<td>20.38095</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>15.10000</td>
+<td>209.21429</td>
+<td>26.15179</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="35b9e304-71e9-42a5-8dc8-3c1d3b382596" class="cell" data-tags="[]" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>agg_by_cyl <span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(cyl, avg_mpg) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(<span class="at">type=</span><span class="st">'l'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="M11-Notes_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>See <a href="https://pages.stat.wisc.edu/~yandell/R_for_data_sciences/curate/tidyverse.html">this article</a> by Brian S. Yandell, a professor of statistics at Wisconsin, for a deeper dive into this topic.</p>
 </section>
-<section id="going-forward" class="level2">
-<h2 class="anchored" data-anchor-id="going-forward">Going Forward</h2>
-<p>During the semester, you will not be making pull requests to submit your work. We do it here to demonstrate the concept since it is so basic to working with GitHub in the real world.</p>
-<p>Instead of making pull requests, you will be using a separate repository for your work So, you will be working with two repositories going forard:</p>
-<ol type="1">
-<li><p><strong>The Course Repo</strong>, which is where you will find course materials, such as homework keys and exercises after the classes in which they are used. This should be <a href="https://ontoligent.github.io/DS5100-book/topics/refreshing-the-course-repo.html">updated each day</a>.</p></li>
-<li><p><strong>Your Assessments Repo</strong>, which is where you will be your finished work as assigned.</p></li>
-<li><p><strong>The Book Repo</strong>, which is where you will find the textbook for this course along with all of the notebooks in it. You may choose to clone or fork this, or you may download individual notebooks from the site as needed.</p></li>
-</ol>
+<section id="helpers" class="level1">
+<h1>Helpers</h1>
+<p>Dplyr makes heavy use of helper functions.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>na.rm <span class="ot">=</span> <span class="cn">TRUE</span> <span class="co"># A simple way of removing missing values from data if they are coded as NA.</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="fu">n</span>() <span class="co">#  Counts the number of observations in a group.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>These often appear inside the arguments of data-masking verbs like <code>mutate()</code>, <code>filter()</code>, and <code>group_by()</code>.</p>
+<p>For example,</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(group_variable) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This counts observations by group.</p>
+</section>
+<section id="joins" class="level1">
+<h1>Joins</h1>
+<p>See <a href="https://r4ds.hadley.nz/joins.html#introduction">Chapter 13, “Joins”</a> in <a href="https://r4ds.hadley.nz/"><em>R for Data Science (2e)</em></a></p>
+<p>It always helps to know SQL, since these libraries essentially implement the relational model.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

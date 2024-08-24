@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DS 5100 Activities</title>
+<title>DS 5100 Activities - M04 Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,7 +114,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/M01-01-Using-Rivanna.html">M01</a></li><li class="breadcrumb-item"><a href="../activities/M01-02-Activity-GitHub.html">Activity: Using Git and GitHub</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      DS 5100 Activities
+      </li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -156,7 +158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/M01-02-Activity-GitHub.html" class="sidebar-item-text sidebar-link active">
+  <a href="../activities/M01-02-Activity-GitHub.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Activity: Using Git and GitHub</span></a>
   </div>
 </li>
@@ -195,163 +197,291 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#activity-using-git-and-github" id="toc-activity-using-git-and-github" class="nav-link active" data-scroll-target="#activity-using-git-and-github">Activity: Using Git and GitHub</a>
-  <ul class="collapse">
-  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a></li>
-  <li><a href="#going-forward" id="toc-going-forward" class="nav-link" data-scroll-target="#going-forward">Going Forward</a></li>
-  </ul></li>
+  <li><a href="#an-alternate-solution-to-hw03-task-1" id="toc-an-alternate-solution-to-hw03-task-1" class="nav-link active" data-scroll-target="#an-alternate-solution-to-hw03-task-1">An alternate solution to HW03 Task 1</a></li>
+  <li><a href="#in-place-functions" id="toc-in-place-functions" class="nav-link" data-scroll-target="#in-place-functions">In-Place Functions</a></li>
+  <li><a href="#in-place-operations" id="toc-in-place-operations" class="nav-link" data-scroll-target="#in-place-operations">In-Place Operations</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">M04 Notes</h1>
+</div>
 
 
 
-<section id="activity-using-git-and-github" class="level1">
-<h1>Activity: Using Git and GitHub</h1>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Goal:</strong> Use Git and GitHub to put course materials on your Rivanna account.</p>
-</div>
-</div>
-</div>
-<p>In this activity, you will go through steps of using Git and GitHub covered in <a href="https://ontoligent.github.io/DS5100-book/topics/git-and-github.html">the reading on GitHub</a>. At this point, you also should be able check off the following items:</p>
-<ul>
-<li>Understand the difference between Git and GitHub.</li>
-<li>Understand the purpose of Git and Github for data science work.</li>
-<li>Ensure Git is installed on your computer.</li>
-<li>Understand how to find a repository on GitHub.</li>
-</ul>
-<p>Let’s apply and extend this knowledge now with our course repo.</p>
-<p>Be sure you are inside the course directory on Rivanna we created earlier.</p>
-<p>We assume you have already created a GitHub account.</p>
-<p>Also, before you get started, follow <a href="https://ontoligent.github.io/DS5100-book/topics/setting-up-ssh.html">these instructions</a> to set an SSH key. You can create this on both your computer and Rivanna, but for the assignment you need only create it on Rivanna.</p>
-<section id="steps" class="level2">
-<h2 class="anchored" data-anchor-id="steps">Steps</h2>
-<p><strong><em>Fork</em></strong> <strong>the course GitHub hosted repository (“repo”) to your GitHub account.</strong></p>
-<p>Go to <a href="https://github.com/ontoligent/DS5100-book">https://github.com/ontoligent/DS5100-book</a> in your web browser.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is the course activities repo — it will be used for activities and answer keys.</p>
-</div>
-</div>
-<p>Click on the Fork icon in the upper right and follow the prompts to finish the process.</p>
-<p>You should end up at the web page of your newly forked repo.</p>
-<p>You will now have a copy of the repo in your GitHub account.</p>
-<p><strong><em>Clone</em></strong> <strong>the forked repo for this course inside of your course directory on Rivanna.</strong></p>
-<p>Find the green Code button and click on it. You should see something like this:</p>
-<p><img src="../media/git-clone.png" height="400"></p>
-<p>Make sure you have selected the SSH option.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Note: This requires that you have SSH set up.</p>
-</div>
-</div>
-<p>Then click on the copy icon and paste the value into the following command:</p>
-<pre class="bashco"><code>git clone https://github.com:&lt;github_user_name&gt;/DS5100-2024-08-O.git</code></pre>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be sure to clone the repo from <em>your</em> GitHub account, replacing <code>&lt;github_user_name&gt;</code> with your GitHub user name. Do not just cut-and-paste the line above!</p>
-</div>
-</div>
-<p>You now have a copy the course repo to your account on Rivanna.</p>
-<p>This will be the directory you created in your pre-class activities under Documents/.</p>
-<p><strong><em>Create</em></strong> <strong>a new file in your newly cloned repo.</strong></p>
-<p>Go to your command line window on Rivanna.</p>
-<p>Use <code>cd</code> to move into the directory just created by the clone operation.</p>
-<p>Move into the directory <code>activities/hello</code></p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Make sure you are in this directory before proceeding.</p>
-</div>
-</div>
-<p>If you get lost – for example if you moved around the file system before this step – you can cd to the absolute path:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Documents/MSDS/DS5100/DS5100-2024-08-O/activities/hello </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note that the tilde sign <code>~</code> stands for the path to your home directory.</p>
-<p>Using the file editor on Rivanna, create and save new file called <code>&lt;userid&gt;_hello.txt</code>, replacing <code>&lt;userid&gt;</code> with your actual user ID, e.g.&nbsp;<code>rca2t_hello.txt</code>.</p>
-<p>In the file, introduce yourself by answering the question: What is the most recent film you watched and enjoyed?</p>
-<p>Save the file.</p>
-<p><strong><em>Add</em></strong> <strong>and <em>commit</em> the changes you made.</strong></p>
-<p>Now do the following:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="op">&lt;</span>userid<span class="op">&gt;</span>_hello.txt</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Created file for class"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong><em>Push</em></strong> <strong>your new file to the repo on GitHub.</strong></p>
-<p>Since you have SSH set up, you can issue the following command without having to enter a password:</p>
-<!--
-Before proceeding, you will need to create personal access token to be able to write to your repo on GitHub. To get one, follow the instructions here --- [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+<div class="quarto-title-meta">
 
-Once you have created and copied your PAT to a safe place, do the following:
--->
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<!-- 
-When prompted for a password, use your PAT instead. 
+    
+  
+    
+  </div>
+  
 
-Note: A more efficient way to work with GitHub is to use SSH. You are free to use this option if you are comfortable following through with [the instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
--->
-<p><strong>Create a <em>Pull Request</em></strong></p>
-<p>Finally, make a pull request to have your file added to the original site. To do this, follow these steps:</p>
-<p>Click on the “Pull requests” menu item (see image below) on the web page for your repo.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../media/pull-request-button.jpg" class="img-fluid figure-img"></p>
-<figcaption>Image of pull request button on GitHub</figcaption>
-</figure>
+
+</header>
+
+
+<section id="an-alternate-solution-to-hw03-task-1" class="level1">
+<h1>An alternate solution to HW03 Task 1</h1>
+<p>The main ideas are: 1. Expressions behave as values. 2. Boolean expressions evaluate to numeric values. 3. Compound expressions can be replaced by arithmetic.</p>
+<p>Regarding #3, note how conditions 1, 2, and 3 are met implicitly by the use of multiplication and addition.</p>
+<div id="73dc6e81-b9f4-4629-9b4f-8cb57168a4d5" class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">101</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> [(x <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>) <span class="op">*</span> <span class="st">'Wahoo'</span> <span class="cf">for</span> x <span class="kw">in</span> N]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> [(x <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span>) <span class="op">*</span> <span class="st">'wah!'</span> <span class="cf">for</span> x <span class="kw">in</span> N]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [a <span class="op">+</span> b <span class="cf">for</span> a, b <span class="kw">in</span> <span class="bu">zip</span>(A, B) <span class="cf">if</span> a <span class="op">+</span> b]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Click on the green “New pull request” button.</p>
-<p>Click on the green “Create pull request” button.</p>
-<p>Give the request the title “In-class activity” and then press the green “Create pull request” button at the bottom of the form.</p>
-<p>Now the ball is in the instructor’s court to merge the request with the original. If you put your file in the right place and named it properly, it will be merged.</p>
+<div id="a076523e-ea52-4177-b6a4-8e7c581eb065" class="cell" data-tags="[]" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>.join(C))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(C))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Wahoo
+wah!
+Wahoo
+Wahoo
+wah!
+Wahoo
+Wahoowah!
+Wahoo
+wah!
+Wahoo
+Wahoo
+wah!
+Wahoo
+Wahoowah!
+Wahoo
+wah!
+Wahoo
+Wahoo
+wah!
+Wahoo
+Wahoowah!
+Wahoo
+wah!
+Wahoo
+Wahoo
+wah!
+Wahoo
+Wahoowah!
+Wahoo
+wah!
+Wahoo
+Wahoo
+wah!
+Wahoo
+Wahoowah!
+Wahoo
+wah!
+Wahoo
+Wahoo
+wah!
+Wahoo
+Wahoowah!
+Wahoo
+wah!
+Wahoo
+Wahoo
+wah!
+47</code></pre>
+</div>
+</div>
+<p>A closer look …</p>
+<div id="eb85b22c-44f6-4f7b-85bc-8647b5d172d6" class="cell" data-tags="[]" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A) <span class="co"># A list with a value every 3rd element</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '', '', 'Wahoo', '']</code></pre>
+</div>
+</div>
+<div id="2e285e77-c9b3-44b7-979d-5256569d07e6" class="cell" data-tags="[]" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(B) <span class="co"># A list with a value every 5th element</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!', '', '', '', '', 'wah!']</code></pre>
+</div>
+</div>
+<div id="ef656f5c-f82d-4eb0-a4c9-283212a96544" class="cell" data-tags="[]" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> N:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="bu">str</span>(x).zfill(<span class="dv">2</span>), <span class="st">' '</span>, A[x<span class="op">-</span><span class="dv">1</span>], B[x<span class="op">-</span><span class="dv">1</span>], sep<span class="op">=</span><span class="st">''</span>) <span class="cf">if</span> A[x<span class="op">-</span><span class="dv">1</span>] <span class="kw">or</span> B[x<span class="op">-</span><span class="dv">1</span>] <span class="cf">else</span> <span class="bu">next</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>03 Wahoo
+05 wah!
+06 Wahoo
+09 Wahoo
+10 wah!
+12 Wahoo
+15 Wahoowah!
+18 Wahoo
+20 wah!
+21 Wahoo
+24 Wahoo
+25 wah!
+27 Wahoo
+30 Wahoowah!
+33 Wahoo
+35 wah!
+36 Wahoo
+39 Wahoo
+40 wah!
+42 Wahoo
+45 Wahoowah!
+48 Wahoo
+50 wah!
+51 Wahoo
+54 Wahoo
+55 wah!
+57 Wahoo
+60 Wahoowah!
+63 Wahoo
+65 wah!
+66 Wahoo
+69 Wahoo
+70 wah!
+72 Wahoo
+75 Wahoowah!
+78 Wahoo
+80 wah!
+81 Wahoo
+84 Wahoo
+85 wah!
+87 Wahoo
+90 Wahoowah!
+93 Wahoo
+95 wah!
+96 Wahoo
+99 Wahoo
+100 wah!</code></pre>
+</div>
+</div>
 </section>
-<section id="going-forward" class="level2">
-<h2 class="anchored" data-anchor-id="going-forward">Going Forward</h2>
-<p>During the semester, you will not be making pull requests to submit your work. We do it here to demonstrate the concept since it is so basic to working with GitHub in the real world.</p>
-<p>Instead of making pull requests, you will be using a separate repository for your work So, you will be working with two repositories going forard:</p>
-<ol type="1">
-<li><p><strong>The Course Repo</strong>, which is where you will find course materials, such as homework keys and exercises after the classes in which they are used. This should be <a href="https://ontoligent.github.io/DS5100-book/topics/refreshing-the-course-repo.html">updated each day</a>.</p></li>
-<li><p><strong>Your Assessments Repo</strong>, which is where you will be your finished work as assigned.</p></li>
-<li><p><strong>The Book Repo</strong>, which is where you will find the textbook for this course along with all of the notebooks in it. You may choose to clone or fork this, or you may download individual notebooks from the site as needed.</p></li>
-</ol>
-
-
+<section id="in-place-functions" class="level1">
+<h1>In-Place Functions</h1>
+<p>In-place functions directly change the value of what they operate on,<br>
+as opposed to expecting these changes to be returned and used to update a value.</p>
+<p>For example, a typical function may work like this:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>add_one(x)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># x remains the same.</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> add_one(x)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># x is now 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A function that performs an in-place operation would work like this:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>add_one(x)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># x is now 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="c50e13ec-9e5a-44f8-8671-6cdc69a91508" class="cell" data-tags="[]" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="3ddc6afa-7d5f-430a-bd16-41cf08baa38b" class="cell" data-tags="[]" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
+</div>
+</div>
+<div id="798503da-0fbc-4f87-8601-e28544338209" class="cell" data-tags="[]" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>x.pop()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>9</code></pre>
+</div>
+</div>
+<div id="6225394e-fbd4-406d-8e65-027c1a6a860d" class="cell" data-tags="[]" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8]</code></pre>
+</div>
+</div>
+<div id="023079e9-4ac6-450c-9304-b3475d38b6e9" class="cell" data-tags="[]" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>x.insert(<span class="dv">0</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="68490629-dd62-49fa-9d44-d7f6e99b851d" class="cell" data-tags="[]" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<pre><code>[10, 0, 1, 2, 3, 4, 5, 6, 7, 8]</code></pre>
+</div>
+</div>
+<div id="b131f9bf-2ab9-4376-bdf4-f6ff4b5f7413" class="cell" data-tags="[]" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>x.append(<span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="108536a7-4da0-4648-9573-bc93fb1c3ee7" class="cell" data-tags="[]" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="26">
+<pre><code>[10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 50, 50]</code></pre>
+</div>
+</div>
+<div id="06e372c0-ce69-4b53-b82f-d4ed5db19ff5" class="cell" data-tags="[]" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>x.reverse()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="a913d261-1610-4c3b-9d7a-fb55defe4059" class="cell" data-tags="[]" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="28">
+<pre><code>[50, 50, 8, 7, 6, 5, 4, 3, 2, 1, 0, 10]</code></pre>
+</div>
+</div>
+<p>These functions do <strong>not</strong> perform in-place operations:</p>
+<div id="a2a2ed60-e95a-46ca-9aee-05c84c8b20db" class="cell" data-tags="[]" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+<pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 50, 50]</code></pre>
+</div>
+</div>
+<div id="f921e186-495b-4073-9377-8094a856c463" class="cell" data-tags="[]" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="30">
+<pre><code>[50, 50, 8, 7, 6, 5, 4, 3, 2, 1, 0, 10]</code></pre>
+</div>
+</div>
+<div id="f286cb15-1bfe-4e20-bf7d-def3cd9f2847" class="cell" data-tags="[]" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">reversed</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="34">
+<pre><code>[10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 50, 50]</code></pre>
+</div>
+</div>
+<div id="ea6c00df-2107-4bc2-82b1-47b46fecf69e" class="cell" data-tags="[]" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="35">
+<pre><code>[50, 50, 8, 7, 6, 5, 4, 3, 2, 1, 0, 10]</code></pre>
+</div>
+</div>
 </section>
+<section id="in-place-operations" class="level1">
+<h1>In-Place Operations</h1>
+<p>Python has a library of functions that perform in-place operations.</p>
+<p><code>a += b</code> is the same as <code>operator.iadd(a, b)</code></p>
+<div id="dbba5953-3598-4eb2-999e-9c1abfd23c37" class="cell" data-tags="[]" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> operator</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="59bb1cfc-9272-4718-b548-266b07a57ff1" class="cell" data-tags="[]" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> [<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="8679a5f3-1363-489f-a944-2c2bfa8781b2" class="cell" data-tags="[]" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>operator.iadd(a, b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="38">
+<pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
+</div>
+</div>
+<div id="2b31bf4c-2e06-4882-bd08-62b54d2d7fb1" class="cell" data-tags="[]" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>a, b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="39">
+<pre><code>([1, 2, 3, 4, 5, 6], [4, 5, 6])</code></pre>
+</div>
+</div>
+<div id="4a664900-d7cb-4887-aec0-0017e4642b7f" class="cell" data-tags="[]" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>operator.imul(a, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="40">
+<pre><code>[1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]</code></pre>
+</div>
+</div>
+<div id="6fc1358b-de5c-42ce-a6d1-c0a8e1756842" class="cell" data-tags="[]" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>[1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]</code></pre>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->

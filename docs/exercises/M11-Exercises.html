@@ -1,0 +1,4255 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DS 5100 Activities - M11 Exercises</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      DS 5100 Activities
+      </li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">DS 5100 Activities</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">M01</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/M01-01-Using-Rivanna.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Activity: Using Rivanna</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/M01-02-Activity-GitHub.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Activity: Using Git and GitHub</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">M02</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/M02-01-Activity-Hello-World.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Activity: Hello, World!</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/M02-02-Activity-JupyterLab-on-Rivanna.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Activity: Jupyter Lab</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#exercise-11.1" id="toc-exercise-11.1" class="nav-link active" data-scroll-target="#exercise-11.1">Exercise 11.1</a></li>
+  <li><a href="#exercise-11.2" id="toc-exercise-11.2" class="nav-link" data-scroll-target="#exercise-11.2">Exercise 11.2</a></li>
+  <li><a href="#exercise-11.3" id="toc-exercise-11.3" class="nav-link" data-scroll-target="#exercise-11.3">Exercise 11.3</a></li>
+  <li><a href="#exercise-11.4" id="toc-exercise-11.4" class="nav-link" data-scroll-target="#exercise-11.4">Exercise 11.4</a></li>
+  <li><a href="#part-1-arrange" id="toc-part-1-arrange" class="nav-link" data-scroll-target="#part-1-arrange">Part 1: Arrange</a></li>
+  <li><a href="#exercise-11.5" id="toc-exercise-11.5" class="nav-link" data-scroll-target="#exercise-11.5">Exercise 11.5</a></li>
+  <li><a href="#exercise-11.6" id="toc-exercise-11.6" class="nav-link" data-scroll-target="#exercise-11.6">Exercise 11.6</a></li>
+  <li><a href="#exercise-11.7" id="toc-exercise-11.7" class="nav-link" data-scroll-target="#exercise-11.7">Exercise 11.7</a></li>
+  <li><a href="#exercise-11.8" id="toc-exercise-11.8" class="nav-link" data-scroll-target="#exercise-11.8">Exercise 11.8</a></li>
+  <li><a href="#part-2-select" id="toc-part-2-select" class="nav-link" data-scroll-target="#part-2-select">Part 2: Select</a></li>
+  <li><a href="#exercise-11.9" id="toc-exercise-11.9" class="nav-link" data-scroll-target="#exercise-11.9">Exercise 11.9</a></li>
+  <li><a href="#exercise-11.10" id="toc-exercise-11.10" class="nav-link" data-scroll-target="#exercise-11.10">Exercise 11.10</a></li>
+  <li><a href="#exercise-11.11" id="toc-exercise-11.11" class="nav-link" data-scroll-target="#exercise-11.11">Exercise 11.11</a></li>
+  <li><a href="#exercise-11.12" id="toc-exercise-11.12" class="nav-link" data-scroll-target="#exercise-11.12">Exercise 11.12</a></li>
+  <li><a href="#part-3-filter" id="toc-part-3-filter" class="nav-link" data-scroll-target="#part-3-filter">Part 3: Filter</a></li>
+  <li><a href="#exercise-11.13" id="toc-exercise-11.13" class="nav-link" data-scroll-target="#exercise-11.13">Exercise 11.13</a></li>
+  <li><a href="#exercise-11.14" id="toc-exercise-11.14" class="nav-link" data-scroll-target="#exercise-11.14">Exercise 11.14</a></li>
+  <li><a href="#exercise-11.15" id="toc-exercise-11.15" class="nav-link" data-scroll-target="#exercise-11.15">Exercise 11.15</a></li>
+  <li><a href="#exercise-11.16" id="toc-exercise-11.16" class="nav-link" data-scroll-target="#exercise-11.16">Exercise 11.16</a></li>
+  <li><a href="#exercise-11.17" id="toc-exercise-11.17" class="nav-link" data-scroll-target="#exercise-11.17">Exercise 11.17</a></li>
+  <li><a href="#exercise-11.18" id="toc-exercise-11.18" class="nav-link" data-scroll-target="#exercise-11.18">Exercise 11.18</a></li>
+  <li><a href="#part-4-filter-with-groups" id="toc-part-4-filter-with-groups" class="nav-link" data-scroll-target="#part-4-filter-with-groups">Part 4: Filter with groups</a></li>
+  <li><a href="#exercise-11.19" id="toc-exercise-11.19" class="nav-link" data-scroll-target="#exercise-11.19">Exercise 11.19</a></li>
+  <li><a href="#exercise-11.20" id="toc-exercise-11.20" class="nav-link" data-scroll-target="#exercise-11.20">Exercise 11.20</a></li>
+  <li><a href="#part-5-mutate" id="toc-part-5-mutate" class="nav-link" data-scroll-target="#part-5-mutate">Part 5: Mutate</a></li>
+  <li><a href="#exercise-11.21" id="toc-exercise-11.21" class="nav-link" data-scroll-target="#exercise-11.21">Exercise 11.21</a></li>
+  <li><a href="#exercise-11.22" id="toc-exercise-11.22" class="nav-link" data-scroll-target="#exercise-11.22">Exercise 11.22</a></li>
+  <li><a href="#exercise-11.23" id="toc-exercise-11.23" class="nav-link" data-scroll-target="#exercise-11.23">Exercise 11.23</a></li>
+  <li><a href="#exercise-11.24" id="toc-exercise-11.24" class="nav-link" data-scroll-target="#exercise-11.24">Exercise 11.24</a></li>
+  <li><a href="#exercise-11.25" id="toc-exercise-11.25" class="nav-link" data-scroll-target="#exercise-11.25">Exercise 11.25</a></li>
+  <li><a href="#part-6-mutate-with-groups" id="toc-part-6-mutate-with-groups" class="nav-link" data-scroll-target="#part-6-mutate-with-groups">Part 6: Mutate with groups</a></li>
+  <li><a href="#exercise-11.26" id="toc-exercise-11.26" class="nav-link" data-scroll-target="#exercise-11.26">Exercise 11.26</a></li>
+  <li><a href="#exercise-11.27" id="toc-exercise-11.27" class="nav-link" data-scroll-target="#exercise-11.27">Exercise 11.27</a></li>
+  <li><a href="#exercise-11.28" id="toc-exercise-11.28" class="nav-link" data-scroll-target="#exercise-11.28">Exercise 11.28</a></li>
+  <li><a href="#part-7-summarize" id="toc-part-7-summarize" class="nav-link" data-scroll-target="#part-7-summarize">Part 7: Summarize</a></li>
+  <li><a href="#exercise-11.29" id="toc-exercise-11.29" class="nav-link" data-scroll-target="#exercise-11.29">Exercise 11.29</a></li>
+  <li><a href="#exercise-11.30" id="toc-exercise-11.30" class="nav-link" data-scroll-target="#exercise-11.30">Exercise 11.30</a></li>
+  <li><a href="#exercise-11.31" id="toc-exercise-11.31" class="nav-link" data-scroll-target="#exercise-11.31">Exercise 11.31</a></li>
+  <li><a href="#part-8-summarize-with-groups" id="toc-part-8-summarize-with-groups" class="nav-link" data-scroll-target="#part-8-summarize-with-groups">Part 8: Summarize with groups</a></li>
+  <li><a href="#exercise-11.32" id="toc-exercise-11.32" class="nav-link" data-scroll-target="#exercise-11.32">Exercise 11.32</a></li>
+  <li><a href="#exercise-11.33" id="toc-exercise-11.33" class="nav-link" data-scroll-target="#exercise-11.33">Exercise 11.33</a></li>
+  <li><a href="#exercise-11.34" id="toc-exercise-11.34" class="nav-link" data-scroll-target="#exercise-11.34">Exercise 11.34</a></li>
+  <li><a href="#exercise-11.35" id="toc-exercise-11.35" class="nav-link" data-scroll-target="#exercise-11.35">Exercise 11.35</a></li>
+  <li><a href="#part-9-combining-verbs" id="toc-part-9-combining-verbs" class="nav-link" data-scroll-target="#part-9-combining-verbs">Part 9: Combining verbs</a></li>
+  <li><a href="#exercise-11.36" id="toc-exercise-11.36" class="nav-link" data-scroll-target="#exercise-11.36">Exercise 11.36</a></li>
+  <li><a href="#exercise-11.37" id="toc-exercise-11.37" class="nav-link" data-scroll-target="#exercise-11.37">Exercise 11.37</a></li>
+  <li><a href="#exercise-11.38" id="toc-exercise-11.38" class="nav-link" data-scroll-target="#exercise-11.38">Exercise 11.38</a></li>
+  <li><a href="#exercise-11.39" id="toc-exercise-11.39" class="nav-link" data-scroll-target="#exercise-11.39">Exercise 11.39</a></li>
+  <li><a href="#exercise-11.40" id="toc-exercise-11.40" class="nav-link" data-scroll-target="#exercise-11.40">Exercise 11.40</a></li>
+  <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits">Credits</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">M11 Exercises</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>DS 5100 | Spring 2024 | Online</p>
+<section id="exercise-11.1" class="level1">
+<h1>Exercise 11.1</h1>
+<p>Install Tidyverse</p>
+<div id="999780f6-c755-4015-b6d9-fdcbf59a44b4" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.3     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+</div>
+</section>
+<section id="exercise-11.2" class="level1">
+<h1>Exercise 11.2</h1>
+<p>We create a super simple tibble to use in the exercises.</p>
+<p>You can find a text file called <code>exercise-data.txt</code> in the directory of today’s module (<code>M11</code>).</p>
+<p>Just cut and paste it into you code.</p>
+<div id="d221c8f5-6481-4ff3-ad6c-cc9a54a398b0" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>scores <span class="ot">&lt;-</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"mike"</span>, <span class="st">"carol"</span>, <span class="st">"greg"</span>, <span class="st">"marcia"</span>, <span class="st">"peter"</span>, <span class="st">"jan"</span>, <span class="st">"bobby"</span>, <span class="st">"cindy"</span>, <span class="st">"alice"</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">school =</span> <span class="fu">c</span>(<span class="st">"south"</span>, <span class="st">"south"</span>, <span class="st">"south"</span>, <span class="st">"south"</span>, <span class="st">"north"</span>, <span class="st">"north"</span>, <span class="st">"north"</span>, <span class="st">"south"</span>, <span class="st">"south"</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">teacher =</span> <span class="fu">c</span>(<span class="st">"johnson"</span>, <span class="st">"johnson"</span>, <span class="st">"johnson"</span>, <span class="st">"johnson"</span>,  <span class="st">"smith"</span>, <span class="st">"smith"</span>, <span class="st">"smith"</span>, <span class="st">"perry"</span>, <span class="st">"perry"</span>),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>, <span class="st">"male"</span>, <span class="st">"female"</span>, <span class="st">"male"</span>, <span class="st">"female"</span>, <span class="st">"male"</span>, <span class="st">"female"</span>, <span class="st">"female"</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">math_score =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">reading_score =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">4</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="exercise-11.3" class="level1">
+<h1>Exercise 11.3</h1>
+<p>View the tibble.</p>
+<div id="dac4ebfe-32e2-4bad-ab82-50a7c74ba4fc" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>scores</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="7d12cda7-7043-4e41-8f70-a40baa684acb" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-execution_count="52">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(scores)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 6
+  name   school teacher sex    math_score reading_score
+  &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;       &lt;dbl&gt;         &lt;dbl&gt;
+1 mike   south  johnson male            4             1
+2 carol  south  johnson female          3             5
+3 greg   south  johnson male            2             2
+4 marcia south  johnson female          4             4
+5 peter  north  smith   male            3             5
+6 jan    north  smith   female          4             4
+7 bobby  north  smith   male            5             1
+8 cindy  south  perry   female          4             5
+9 alice  south  perry   female          5             4</code></pre>
+</div>
+</div>
+</section>
+<section id="exercise-11.4" class="level1">
+<h1>Exercise 11.4</h1>
+<p>Make sure you understand the difference between</p>
+<ul>
+<li>doing something and assigning it to a variable</li>
+<li>and just doing it without assigning it</li>
+</ul>
+<p>when using <code>%&gt;%</code>.</p>
+<p>First, just get the first three rows (using <code>slice()</code>).</p>
+<p>Then, assign the first three rows to a variable.</p>
+<div id="83f83cfc-3da9-4ac9-a3a3-aa1607b8dc3e" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="53">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 3 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Get the first 3 rows, and assign it to a new name <code>scores_small</code>.</p>
+<div id="9bdf4726-d841-4d33-beef-63a0fff7d8f0" class="cell" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="54">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>scores_small <span class="ot">&lt;-</span> scores <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>See what’s in <code>scores_small</code>.</p>
+<div id="ff9bfa80-c17d-44d5-a63b-1100f9a6135b" class="cell" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="55">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>scores_small</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 3 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Another option:</p>
+<div id="df7af4e4-d62a-448e-b34e-c80d5dec8855" class="cell" data-tags="[]" data-execution_count="56">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 3 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>And the old way:</p>
+<div id="53757d2d-df34-46e6-8709-91ae15467996" class="cell" data-tags="[]" data-execution_count="59">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>scores[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 3 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="part-1-arrange" class="level1">
+<h1>Part 1: Arrange</h1>
+</section>
+<section id="exercise-11.5" class="level1">
+<h1>Exercise 11.5</h1>
+<p>Sort the data by <code>math_score</code> from high to low.</p>
+<p>Who had the best math score?</p>
+<div id="75fe4620-ed43-4f24-8395-ee0ce54329d6" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="60">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(math_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>Answer:</strong> Bobby and Alice both tied for the highest math score</p>
+</section>
+<section id="exercise-11.6" class="level1">
+<h1>Exercise 11.6</h1>
+<p>Sort the data by <code>name</code> in alphabetical order.</p>
+<div id="0fbdcb31-2283-47ad-9ce4-bd691b2173eb" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="63">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.7" class="level1">
+<h1>Exercise 11.7</h1>
+<p>Sort the data by <code>sex</code> so females show up first.</p>
+<div id="c77cdf82-3d70-4f61-8d83-ab64b3bcac20" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="64">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(sex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.8" class="level1">
+<h1>Exercise 11.8</h1>
+<p>Sort the data by <code>school</code>, <code>teacher</code>, <code>sex</code>, <code>math_score</code>, and <code>reading_score</code>.</p>
+<div id="f746d989-02c8-41c3-92df-1cb53442dfaf" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="67">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(school, teacher, sex, math_score, reading_score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="part-2-select" class="level1">
+<h1>Part 2: Select</h1>
+</section>
+<section id="exercise-11.9" class="level1">
+<h1>Exercise 11.9</h1>
+<p>Select only <code>name</code>, <code>math_score</code>, and <code>reading_score</code>.</p>
+<div id="44cb3694-b413-4c4b-b815-e055a0adc046" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="68">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, math_score, reading_score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 3</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.10" class="level1">
+<h1>Exercise 11.10</h1>
+<p>Select all of the columns except the <code>sex</code> column.</p>
+<div id="13cca5ac-211b-4266-b098-44c39702a8c2" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="69">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>sex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 5</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.11" class="level1">
+<h1>Exercise 11.11</h1>
+<p>Select all of the columns except the <code>math_score</code> and <code>reading_score columns</code>.</p>
+<div id="3d9f0d18-5c35-4aa8-a4ea-e70f72de88ba" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="70">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>sex, <span class="sc">-</span>reading_score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 4</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.12" class="level1">
+<h1>Exercise 11.12</h1>
+<p>Keep all of the columns but rearrange them so that <code>sex</code> is the first column.</p>
+<div id="88648bf3-63dd-4ee7-957e-efcdf47ce9b6" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="71">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(sex, <span class="fu">everything</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>male</td>
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>female</td>
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>male</td>
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>female</td>
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>male</td>
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>female</td>
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>male</td>
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>female</td>
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>female</td>
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="part-3-filter" class="level1">
+<h1>Part 3: Filter</h1>
+</section>
+<section id="exercise-11.13" class="level1">
+<h1>Exercise 11.13</h1>
+<p>Filter by students who are <code>male</code> and went to <code>south</code>.</p>
+<p><strong>Option 1</strong></p>
+<div id="e9dd98a3-282f-4fb7-820e-9e3a4d8a00dd" class="cell" data-jp-markdownheadingcollapsed="true" data-slideshow="{&quot;slide_type&quot;:&quot;-&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">"male"</span> <span class="sc">&amp;</span> school <span class="sc">==</span> <span class="st">"south"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 2 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>Option 2</strong></p>
+<p>Useing a comma <code>,</code> instead of <code>&amp;</code>.</p>
+<div id="3c692575-43bd-4710-b973-b6e638321b19" class="cell" data-jp-markdownheadingcollapsed="true" data-slideshow="{&quot;slide_type&quot;:&quot;-&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">"male"</span>, school <span class="sc">==</span> <span class="st">"south"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 2 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.14" class="level1">
+<h1>Exercise 11.14</h1>
+<p>Filter by students who did above average in math.</p>
+<div id="b11a13f5-54b2-47c3-8c85-203f5f242bf0" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="72">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(math_score <span class="sc">&gt;</span> <span class="fu">mean</span>(math_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 6 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.15" class="level1">
+<h1>Exercise 11.15</h1>
+<p>Use <code>filter()</code> to figure out how many students had a math score of 4 or more and a reading score of 3 or more.</p>
+<div id="e97e345f-69c2-4f0c-a32d-519bcdc312ee" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="73">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(math_score <span class="sc">&gt;=</span> <span class="dv">4</span> <span class="sc">&amp;</span> reading_score <span class="sc">&gt;=</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 4 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.16" class="level1">
+<h1>Exercise 11.16</h1>
+<p>Filter by students who got a 3 or worse in either math or reading.</p>
+<div id="3ff33aea-0f18-4873-bef0-833845f9728e" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="74">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(math_score <span class="sc">&lt;=</span> <span class="dv">3</span> <span class="sc">|</span> reading_score <span class="sc">&lt;=</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 5 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.17" class="level1">
+<h1>Exercise 11.17</h1>
+<p>Filter by students who got a reading score of 2, 3, or 4.</p>
+<div id="f2677678-2760-45cd-9723-a0737b500ef9" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="76">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(reading_score <span class="sc">==</span> <span class="dv">2</span> <span class="sc">|</span> reading_score <span class="sc">==</span> <span class="dv">3</span> <span class="sc">|</span> reading_score <span class="sc">==</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 4 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="5ce6b37f-eef1-43cf-acca-31eb1b1972d8" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="77">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(reading_score <span class="sc">&gt;=</span> <span class="dv">2</span> <span class="sc">&amp;</span> reading_score <span class="sc">&lt;=</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 4 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="b514302d-a15b-4d50-b222-787caa2eeb10" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="78">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(reading_score <span class="sc">%in%</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 4 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.18" class="level1">
+<h1>Exercise 11.18</h1>
+<p>Filter by students who have a name that starts with <code>'m'</code>.</p>
+<p>Hint: type <code>?substr</code> in the console and then scroll to the bottom of the help file to see useful examples.</p>
+<div id="1c329dc6-fcfb-4945-bc27-858320f5ffea" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="79">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ?substr</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="29cd1501-36fd-46b1-80d0-dcee98464bbe" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="80">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="fu">substr</span>(name, <span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">==</span> <span class="st">'m'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 2 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="part-4-filter-with-groups" class="level1">
+<h1>Part 4: Filter with groups</h1>
+</section>
+<section id="exercise-11.19" class="level1">
+<h1>Exercise 11.19</h1>
+<p>Filter to teachers whose best math student got a score of 5.</p>
+<div id="e276c13f" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-execution_count="81">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(teacher) <span class="sc">%&gt;%</span> </span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">max</span>(math_score) <span class="sc">==</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A grouped_df: 5 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Note that all students from both teachers are shown.</p>
+</section>
+<section id="exercise-11.20" class="level1">
+<h1>Exercise 11.20</h1>
+<p>Filter to the sex with a mean math score of 4.</p>
+<div id="9ef1a3d5-1319-4927-931d-ead09d0b51d4" class="cell" data-jp-markdownheadingcollapsed="true" data-scrolled="true" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="91">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(sex) <span class="sc">%&gt;%</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="fu">mean</span>(math_score) <span class="sc">==</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A grouped_df: 5 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="part-5-mutate" class="level1">
+<h1>Part 5: Mutate</h1>
+</section>
+<section id="exercise-11.21" class="level1">
+<h1>Exercise 11.21</h1>
+<p>Set the math and reading scores 10 times their original values.</p>
+<div id="bc4f345d-483c-4b9b-9a0b-3ac9e41792e6" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="94">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">math_score =</span>  math_score <span class="sc">*</span> <span class="dv">10</span>, </span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">reading_score =</span> reading_score <span class="sc">*</span> <span class="dv">10</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>40</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>30</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>20</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>40</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>30</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>40</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>50</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>40</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>50</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.22" class="level1">
+<h1>Exercise 11.22</h1>
+<p>Create a new column called <code>math_reading_avg</code> which is the average of a student’s math and reading scores.</p>
+<p>That is, combine the two scores and take their average.</p>
+<div id="f75406a2-f071-4f47-af19-9825b883de7d" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="97">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">math_reading_avg =</span> (math_score <span class="sc">+</span> reading_score) <span class="sc">/</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 7</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+<th data-quarto-table-cell-role="th" scope="col">math_reading_avg</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+<td>2.5</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+<td>3.0</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+<td>4.5</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+<td>4.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.23" class="level1">
+<h1>Exercise 11.23</h1>
+<p>Create a new column <code>high_math_achiever</code> that is an indicator of if a student got a 4 or better on their math score.</p>
+<div id="6b80a7b3-5300-46d9-b6b6-30a395000e61" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="100">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">high_math_achiever =</span> math_score <span class="sc">&gt;=</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 7</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+<th data-quarto-table-cell-role="th" scope="col">high_math_achiever</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;lgl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+<td>TRUE</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+<td>FALSE</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+<td>FALSE</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>TRUE</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+<td>FALSE</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>TRUE</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+<td>TRUE</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+<td>TRUE</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+<td>TRUE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.24" class="level1">
+<h1>Exercise 11.24</h1>
+<p>Create a new column <code>reading_score_centered</code> that is a student’s reading score minus the mean of all students’ reading scores.</p>
+<div id="aa3aa574-6b39-40b1-a186-d819dc95f780" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="101">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">reading_score_centered =</span> reading_score <span class="sc">-</span> <span class="fu">mean</span>(reading_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 7</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score_centered</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+<td>-2.4444444</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+<td>1.5555556</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+<td>-1.4444444</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>0.5555556</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+<td>1.5555556</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>0.5555556</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+<td>-2.4444444</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+<td>1.5555556</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+<td>0.5555556</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Note how this may be confusing: <code>reading_score</code> is used twice in the <code>mutate()</code> arugment.</p>
+<p>In the first case, it refers to value for the current observation.</p>
+<p>In the second case, it refers to the all the values.</p>
+</section>
+<section id="exercise-11.25" class="level1">
+<h1>Exercise 11.25</h1>
+<p>Create a new column called <code>science_score</code> that adds the square of <code>math_score</code> to <code>reading_score</code>.</p>
+<p>Display the result by sorting on the new column in descending order.</p>
+<div id="dbfd7459-bf45-46cd-843e-301ba973f71d" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="114">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">science_score =</span> math_score<span class="sc">**</span><span class="dv">2</span> <span class="sc">+</span> reading_score) <span class="sc">%&gt;%</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(science_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 7</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+<th data-quarto-table-cell-role="th" scope="col">science_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+<td>29</td>
+</tr>
+<tr class="even">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+<td>26</td>
+</tr>
+<tr class="odd">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+<td>21</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+<td>17</td>
+</tr>
+<tr class="odd">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="part-6-mutate-with-groups" class="level1">
+<h1>Part 6: Mutate with groups</h1>
+</section>
+<section id="exercise-11.26" class="level1">
+<h1>Exercise 11.26</h1>
+<p>Create a <code>math_score_centered_by_sex</code> column that subtracts a student’s <code>math_score</code> from the mean <code>math_score</code> by sex.</p>
+<p>Display the results in descending order on the new column.</p>
+<div id="91e0eb3a-9c8c-475c-b3cd-6e1f7aaf9535" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="115">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">%&gt;%</span> </span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">math_score_centered_by_sex =</span> math_score <span class="sc">-</span> <span class="fu">mean</span>(math_score)) <span class="sc">%&gt;%</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(math_score_centered_by_sex))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A grouped_df: 9 × 7</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score_centered_by_sex</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+<td>1.5</td>
+</tr>
+<tr class="even">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+<td>-0.5</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+<td>-1.0</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+<td>-1.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>Question</strong>: If Mike and Cindy both got a 4 for their math score, then<br>
+why does Mike have a higher <code>math_score_centered_by_sex</code> score?</p>
+<p><strong>Answer:</strong> He is higher relative to the other males, which are lower overall.</p>
+</section>
+<section id="exercise-11.27" class="level1">
+<h1>Exercise 11.27</h1>
+<p>Create a <code>reading_score_centered_by_teacher</code> column.</p>
+<div id="bd9c2c47-5eb8-404c-b607-ccbbf2ddf414" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="117">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(teacher) <span class="sc">%&gt;%</span> </span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">math_score_centered_by_teacher =</span> math_score <span class="sc">-</span> <span class="fu">mean</span>(math_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A grouped_df: 9 × 7</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score_centered_by_teacher</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+<td>0.75</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+<td>-0.25</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+<td>-1.25</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>0.75</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+<td>-1.00</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+<td>1.00</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+<td>-0.50</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+<td>0.50</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.28" class="level1">
+<h1>Exercise 11.28</h1>
+<p>Make a <code>number_of_students_in_class</code> column that is number of students in a teacher’s class.</p>
+<p>For example, it should be 4 for mike and 3 for peter.</p>
+<div id="94aedf53-d77a-45a1-81c6-07c0c15cdecf" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="119">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(teacher) <span class="sc">%&gt;%</span> </span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">number_of_students_in_class =</span> <span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A grouped_df: 9 × 7</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+<th data-quarto-table-cell-role="th" scope="col">number_of_students_in_class</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;int&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mike</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>johnson</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>marcia</td>
+<td>south</td>
+<td>johnson</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>north</td>
+<td>smith</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>smith</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>perry</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="part-7-summarize" class="level1">
+<h1>Part 7: Summarize</h1>
+</section>
+<section id="exercise-11.29" class="level1">
+<h1>Exercise 11.29</h1>
+<p>Use <code>summarize()</code> command to find the mean math score for all students.</p>
+<div id="11f5c81c-c22f-4bb3-82a8-f241e4f071d6" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="121">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">math_score_mean =</span> <span class="fu">mean</span>(math_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 1 × 1</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">math_score_mean</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3.777778</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Note how <code>summarize()</code> creates a new column, like <code>mutate()</code>.</p>
+<p>It does this because it creates a new table.</p>
+</section>
+<section id="exercise-11.30" class="level1">
+<h1>Exercise 11.30</h1>
+<p>Find the mean reading score for all students.</p>
+<div id="959a4320-348c-4234-b33f-e0f000b7de08" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="127">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">math_score_mean =</span> <span class="fu">mean</span>(reading_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 1 × 1</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">math_score_mean</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3.444444</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.31" class="level1">
+<h1>Exercise 11.31</h1>
+<p>Find the mean for math scores and reading scores added together.</p>
+<p>Call the column <code>both_score_mean</code>.</p>
+<div id="043d931f-2cd6-43b1-8e44-583a1325cacf" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="128">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">both_score_mean =</span> <span class="fu">mean</span>((math_score <span class="sc">+</span> reading_score)<span class="sc">/</span><span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 1 × 1</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">both_score_mean</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3.611111</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="part-8-summarize-with-groups" class="level1">
+<h1>Part 8: Summarize with groups</h1>
+</section>
+<section id="exercise-11.32" class="level1">
+<h1>Exercise 11.32</h1>
+<p>Find the minimum math score for each school.</p>
+<div id="2a4134f0-3ebf-4331-9dbc-5a377cc8a979" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="129">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(school) <span class="sc">%&gt;%</span> </span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">min_math_score =</span> <span class="fu">min</span>(math_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 2 × 2</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">min_math_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>north</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>south</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.33" class="level1">
+<h1>Exercise 11.33</h1>
+<p>Find the maximum math score for each teacher.</p>
+<div id="dad0dc70-cc33-40d0-8399-0ebaabe7b2e1" class="cell" data-scrolled="true" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="130">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(teacher) <span class="sc">%&gt;%</span> </span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">max_math_score =</span> <span class="fu">max</span>(math_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 3 × 2</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">max_math_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>johnson</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>perry</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>smith</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>Excercise 11.19 Redone</strong></p>
+<div id="1bce154b" class="cell" data-jp-markdownheadingcollapsed="true" data-slideshow="{&quot;slide_type&quot;:&quot;-&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="132">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(teacher) <span class="sc">%&gt;%</span> </span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">max_math =</span> <span class="fu">max</span>(math_score)) <span class="sc">%&gt;%</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(max_math <span class="sc">==</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(teacher)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 2 × 1</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>perry</td>
+</tr>
+<tr class="even">
+<td>smith</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.34" class="level1">
+<h1>Exercise 11.34</h1>
+<p>If we grouped by sex, and then summarized with the minimum reading score, how many rows would the resulting data frame have?</p>
+<p>2, because there are 2 values for sex in the table.</p>
+<p>Group by with summarization operations yield dataframes with the same number of rows as distinct values in the grouping.</p>
+<p>This is an example of the <strong>Split-Apply-Combine</strong> pattern. * To <strong>group</strong> is to <strong>split</strong> by distinct value of some feature of set of features * To <strong>summarize</strong> to apply some <strong>aggregate function</strong> to each group * To <strong>combine</strong> means to bind the resulting single row tables into one table, with one row for each group</p>
+<p>See <a href="https://pages.stat.wisc.edu/~yandell/R_for_data_sciences/curate/tidyverse.html">this article</a> by Brian S. Yandell, a professor of statistics at Wisconsin, for a deeper dive into this topic.</p>
+<div id="c4a43495-488c-4766-bbe8-832624cb27a8" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;fragment&quot;}" data-tags="[]" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="135">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">%&gt;%</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">min_reading_score =</span> <span class="fu">min</span>(reading_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 2 × 2</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">min_reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>female</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>male</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.35" class="level1">
+<h1>Exercise 11.35</h1>
+<p>Create a data frame with the mean and median reading score by sex, as well as the number of students of that sex.</p>
+<div id="09c85a88-de6c-4053-bbee-8c1010b8e07c" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="137">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">%&gt;%</span> </span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_reading_score =</span> <span class="fu">mean</span>(reading_score), </span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">median_reading_score =</span> <span class="fu">median</span>(reading_score), </span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">n =</span> <span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 2 × 4</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">mean_reading_score</th>
+<th data-quarto-table-cell-role="th" scope="col">median_reading_score</th>
+<th data-quarto-table-cell-role="th" scope="col">n</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;int&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>female</td>
+<td>4.40</td>
+<td>4.0</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>male</td>
+<td>2.25</td>
+<td>1.5</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="part-9-combining-verbs" class="level1">
+<h1>Part 9: Combining verbs</h1>
+</section>
+<section id="exercise-11.36" class="level1">
+<h1>Exercise 11.36</h1>
+<p>Select just the <code>name</code> and <code>math_score</code> columns.</p>
+<p>Then create a new column <code>math_score_ec</code> that is a students math score plus 5 extra credit points.</p>
+<p>Finally, arrange the data frame by <code>math_score_ec</code> from low to high.</p>
+<div id="37591b59-fa05-4bf8-abdd-4e6b059a598e" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="139">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, math_score) <span class="sc">%&gt;%</span> </span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">math_score_ec =</span> math_score <span class="sc">+</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(math_score_ec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 3</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score_ec</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>greg</td>
+<td>2</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>3</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>peter</td>
+<td>3</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>mike</td>
+<td>4</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>marcia</td>
+<td>4</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>jan</td>
+<td>4</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>cindy</td>
+<td>4</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td>bobby</td>
+<td>5</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>5</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.37" class="level1">
+<h1>Exercise 11.37</h1>
+<p>Select every column except the teacher column.</p>
+<p>Create a new variabled called <code>mean_score</code> that is the mean of a student’s math and reading score.</p>
+<p>Finally, arrange the data frame by <code>mean_score</code> from low to high.</p>
+<div id="60de0c3a-cd53-44bb-a860-e474bed06b2f" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="141">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>teacher) <span class="sc">%&gt;%</span> </span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_score =</span> (math_score <span class="sc">+</span> reading_score)<span class="sc">/</span><span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(mean_score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 9 × 6</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">name</th>
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">math_score</th>
+<th data-quarto-table-cell-role="th" scope="col">reading_score</th>
+<th data-quarto-table-cell-role="th" scope="col">mean_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>greg</td>
+<td>south</td>
+<td>male</td>
+<td>2</td>
+<td>2</td>
+<td>2.0</td>
+</tr>
+<tr class="even">
+<td>mike</td>
+<td>south</td>
+<td>male</td>
+<td>4</td>
+<td>1</td>
+<td>2.5</td>
+</tr>
+<tr class="odd">
+<td>bobby</td>
+<td>north</td>
+<td>male</td>
+<td>5</td>
+<td>1</td>
+<td>3.0</td>
+</tr>
+<tr class="even">
+<td>carol</td>
+<td>south</td>
+<td>female</td>
+<td>3</td>
+<td>5</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td>marcia</td>
+<td>south</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td>peter</td>
+<td>north</td>
+<td>male</td>
+<td>3</td>
+<td>5</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td>jan</td>
+<td>north</td>
+<td>female</td>
+<td>4</td>
+<td>4</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td>cindy</td>
+<td>south</td>
+<td>female</td>
+<td>4</td>
+<td>5</td>
+<td>4.5</td>
+</tr>
+<tr class="odd">
+<td>alice</td>
+<td>south</td>
+<td>female</td>
+<td>5</td>
+<td>4</td>
+<td>4.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.38" class="level1">
+<h1>Exercise 11.38</h1>
+<p>Remove any students with <code>'smith'</code> as a teacher, then find the mean <code>math_score</code> by <code>sex</code>.</p>
+<div id="94ebbe35-8361-44db-a88e-49ae8d5c219e" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="143">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(teacher <span class="sc">!=</span> <span class="st">"smith"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">%&gt;%</span> </span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_math_score =</span> <span class="fu">mean</span>(math_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 2 × 2</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">sex</th>
+<th data-quarto-table-cell-role="th" scope="col">mean_math_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>female</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>male</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.39" class="level1">
+<h1>Exercise 11.39</h1>
+<p>Find the min, max, and median <code>reading_score</code> for female students at south school.</p>
+<div id="62d2c1c7-05d1-4568-9789-43ff77d383c4" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;subslide&quot;}" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="144">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">"female"</span>, school <span class="sc">==</span> <span class="st">"south"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">min_reading_score =</span> <span class="fu">min</span>(reading_score),</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">max_reading_score =</span> <span class="fu">max</span>(reading_score),</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">median_reading_score =</span> <span class="fu">median</span>(reading_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 1 × 3</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">min_reading_score</th>
+<th data-quarto-table-cell-role="th" scope="col">max_reading_score</th>
+<th data-quarto-table-cell-role="th" scope="col">median_reading_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4</td>
+<td>5</td>
+<td>4.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-11.40" class="level1">
+<h1>Exercise 11.40</h1>
+<p>Inspect each of the following code blocks. They both do about the same thing. Which one do you think is preffered from a computer efficiency standpoint?</p>
+<p><strong>Code block 1</strong></p>
+<div id="9ac0cc5f-46c7-48b0-9a94-f6bef40cdee8" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;-&quot;}" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="157">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(school, teacher) <span class="sc">%&gt;%</span> </span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">max_math_score =</span> <span class="fu">max</span>(math_score)) <span class="sc">%&gt;%</span> </span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(school <span class="sc">==</span> <span class="st">"south"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'school'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A grouped_df: 2 × 3</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">max_math_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>south</td>
+<td>johnson</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>south</td>
+<td>perry</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>Code block 2</strong></p>
+<div id="f7eed92e-d20f-4719-beac-138a430ea31f" class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;-&quot;}" data-vscode="{&quot;languageId&quot;:&quot;r&quot;}" data-execution_count="146">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(school <span class="sc">==</span> <span class="st">"south"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(teacher) <span class="sc">%&gt;%</span> </span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">max_math_score =</span> <span class="fu">max</span>(math_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A tibble: 2 × 2</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">max_math_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>johnson</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>perry</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>Answer:</strong> They both get the max math score by teacher for teachers at south school. The first block calculates the <code>max_math_score</code> for both north and south and then filters out north after that calculation. The second block filters out north right away. This is preferred because it prevents the computer from making unnecessary calculations.</p>
+<p>Regarding the error, we could have done this in the first code block:</p>
+<div id="2618f431-0bc3-410a-b24d-4e0819c073ca" class="cell" data-tags="[]" data-execution_count="159">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>scores <span class="sc">%&gt;%</span> </span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(school, teacher) <span class="sc">%&gt;%</span> </span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">max_math_score =</span> <span class="fu">max</span>(math_score), <span class="at">.groups =</span> <span class="st">'keep'</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(school <span class="sc">==</span> <span class="st">"south"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>A grouped_df: 2 × 3</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" scope="col">school</th>
+<th data-quarto-table-cell-role="th" scope="col">teacher</th>
+<th data-quarto-table-cell-role="th" scope="col">max_math_score</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;chr&gt;</th>
+<th data-quarto-table-cell-role="th" scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>south</td>
+<td>johnson</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>south</td>
+<td>perry</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="credits" class="level1">
+<h1>Credits</h1>
+<p>This notebook is adapted largely from <a href="https://teachingr.com/content/the-5-verbs-of-dplyr/the-5-verbs-of-dplyr-exercise.html">Stenhaug’s “The 5 verbs of dplyr”</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -18,15 +18,6 @@ website:
           - "activities/M02-01-Activity-Hello-World.qmd"
           - "activities/M02-02-Activity-JupyterLab-on-Rivanna.qmd"
 
-# - href: activities/M01-01-Using-Rivanna.qmd
-#   text: "Activity 1: Using Rivanna"
-# - href: activities/M01-02-Activity-GitHub.qmd
-#   text: "Activity 2: Git and GitHub"
-# - href: activities/M02-01-Activity-Hello-World.qmd
-#   text: "Activity 1: Hello, World!"
-# - href: activities/M02-02-Activity-JupyterLab-on-Rivanna.qmd
-#   text: "Activity 2: Jupyter Lab on Rivanna"
-
 format:
   html:
     theme: cosmo

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DS 5100 Activities</title>
+<title>DS 5100 Activities - FP 02 Classes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -101,6 +67,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -114,7 +109,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/M01-01-Using-Rivanna.html">M01</a></li><li class="breadcrumb-item"><a href="../activities/M01-02-Activity-GitHub.html">Activity: Using Git and GitHub</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      DS 5100 Activities
+      </li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -156,7 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/M01-02-Activity-GitHub.html" class="sidebar-item-text sidebar-link active">
+  <a href="../activities/M01-02-Activity-GitHub.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Activity: Using Git and GitHub</span></a>
   </div>
 </li>
@@ -195,10 +192,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#activity-using-git-and-github" id="toc-activity-using-git-and-github" class="nav-link active" data-scroll-target="#activity-using-git-and-github">Activity: Using Git and GitHub</a>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a>
   <ul class="collapse">
-  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a></li>
-  <li><a href="#going-forward" id="toc-going-forward" class="nav-link" data-scroll-target="#going-forward">Going Forward</a></li>
+  <li><a href="#minimal-requirements" id="toc-minimal-requirements" class="nav-link" data-scroll-target="#minimal-requirements">Minimal requirements</a></li>
+  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced">Advanced</a></li>
+  </ul></li>
+  <li><a href="#class-definitions" id="toc-class-definitions" class="nav-link" data-scroll-target="#class-definitions">Class Definitions</a>
+  <ul class="collapse">
+  <li><a href="#the-die-class" id="toc-the-die-class" class="nav-link" data-scroll-target="#the-die-class">The Die class</a>
+  <ul class="collapse">
+  <li><a href="#general-definition" id="toc-general-definition" class="nav-link" data-scroll-target="#general-definition"><strong>General Definition</strong></a></li>
+  <li><a href="#specific-methods-and-attributes" id="toc-specific-methods-and-attributes" class="nav-link" data-scroll-target="#specific-methods-and-attributes"><strong>Specific Methods and Attributes</strong></a></li>
+  </ul></li>
+  <li><a href="#the-game-class" id="toc-the-game-class" class="nav-link" data-scroll-target="#the-game-class">The Game class</a>
+  <ul class="collapse">
+  <li><a href="#general-definition-1" id="toc-general-definition-1" class="nav-link" data-scroll-target="#general-definition-1">General Definition</a></li>
+  <li><a href="#specific-methods-and-attributes-1" id="toc-specific-methods-and-attributes-1" class="nav-link" data-scroll-target="#specific-methods-and-attributes-1">Specific Methods and Attributes</a></li>
+  </ul></li>
+  <li><a href="#the-analyzer-class" id="toc-the-analyzer-class" class="nav-link" data-scroll-target="#the-analyzer-class">The Analyzer class</a>
+  <ul class="collapse">
+  <li><a href="#general-definition-2" id="toc-general-definition-2" class="nav-link" data-scroll-target="#general-definition-2">General Definition</a></li>
+  <li><a href="#specific-methods-and-attributes-2" id="toc-specific-methods-and-attributes-2" class="nav-link" data-scroll-target="#specific-methods-and-attributes-2">Specific Methods and Attributes</a></li>
+  </ul></li>
+  <li><a href="#general-requirements-for-classes" id="toc-general-requirements-for-classes" class="nav-link" data-scroll-target="#general-requirements-for-classes">General Requirements for Classes</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -206,149 +222,177 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">FP 02 Classes</h1>
+</div>
 
 
 
-<section id="activity-using-git-and-github" class="level1">
-<h1>Activity: Using Git and GitHub</h1>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Goal:</strong> Use Git and GitHub to put course materials on your Rivanna account.</p>
-</div>
-</div>
-</div>
-<p>In this activity, you will go through steps of using Git and GitHub covered in <a href="https://ontoligent.github.io/DS5100-book/topics/git-and-github.html">the reading on GitHub</a>. At this point, you also should be able check off the following items:</p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="instructions" class="level1">
+<h1>Instructions</h1>
+<section id="minimal-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="minimal-requirements">Minimal requirements</h2>
+<p>In this activity, you will create a set of empty classes in the final project repo you created last week.</p>
+<p>Empty classes and function are sometimes called “stubs” by software developers.</p>
+<p>The internal code for these classes will be added later as part of your final project.</p>
+<p>To complete the activity, do the following:</p>
 <ul>
-<li>Understand the difference between Git and GitHub.</li>
-<li>Understand the purpose of Git and Github for data science work.</li>
-<li>Ensure Git is installed on your computer.</li>
-<li>Understand how to find a repository on GitHub.</li>
+<li><p>In your repo directory, create a subdirectory called <code>montecarlo</code>.</p></li>
+<li><p>Inside of that directory, create a Python file called <code>montecarlo.py</code>.</p></li>
+<li><p>Open the file in a text editor and create stubs for three classes with the following names: <code>Die</code>, <code>Game</code>, and <code>Analyzer</code>.</p></li>
+<li><p>Within each class, define a function (i.e.&nbsp;a method) called <code>__init__()</code>.</p></li>
+<li><p>For the body of these methods just enter the statement pass.</p></li>
 </ul>
-<p>Let’s apply and extend this knowledge now with our course repo.</p>
-<p>Be sure you are inside the course directory on Rivanna we created earlier.</p>
-<p>We assume you have already created a GitHub account.</p>
-<p>Also, before you get started, follow <a href="https://ontoligent.github.io/DS5100-book/topics/setting-up-ssh.html">these instructions</a> to set an SSH key. You can create this on both your computer and Rivanna, but for the assignment you need only create it on Rivanna.</p>
-<section id="steps" class="level2">
-<h2 class="anchored" data-anchor-id="steps">Steps</h2>
-<p><strong><em>Fork</em></strong> <strong>the course GitHub hosted repository (“repo”) to your GitHub account.</strong></p>
-<p>Go to <a href="https://github.com/ontoligent/DS5100-book">https://github.com/ontoligent/DS5100-book</a> in your web browser.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is the course activities repo — it will be used for activities and answer keys.</p>
-</div>
-</div>
-<p>Click on the Fork icon in the upper right and follow the prompts to finish the process.</p>
-<p>You should end up at the web page of your newly forked repo.</p>
-<p>You will now have a copy of the repo in your GitHub account.</p>
-<p><strong><em>Clone</em></strong> <strong>the forked repo for this course inside of your course directory on Rivanna.</strong></p>
-<p>Find the green Code button and click on it. You should see something like this:</p>
-<p><img src="../media/git-clone.png" height="400"></p>
-<p>Make sure you have selected the SSH option.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Note: This requires that you have SSH set up.</p>
-</div>
-</div>
-<p>Then click on the copy icon and paste the value into the following command:</p>
-<pre class="bashco"><code>git clone https://github.com:&lt;github_user_name&gt;/DS5100-2024-08-O.git</code></pre>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be sure to clone the repo from <em>your</em> GitHub account, replacing <code>&lt;github_user_name&gt;</code> with your GitHub user name. Do not just cut-and-paste the line above!</p>
-</div>
-</div>
-<p>You now have a copy the course repo to your account on Rivanna.</p>
-<p>This will be the directory you created in your pre-class activities under Documents/.</p>
-<p><strong><em>Create</em></strong> <strong>a new file in your newly cloned repo.</strong></p>
-<p>Go to your command line window on Rivanna.</p>
-<p>Use <code>cd</code> to move into the directory just created by the clone operation.</p>
-<p>Move into the directory <code>activities/hello</code></p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Make sure you are in this directory before proceeding.</p>
-</div>
-</div>
-<p>If you get lost – for example if you moved around the file system before this step – you can cd to the absolute path:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Documents/MSDS/DS5100/DS5100-2024-08-O/activities/hello </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note that the tilde sign <code>~</code> stands for the path to your home directory.</p>
-<p>Using the file editor on Rivanna, create and save new file called <code>&lt;userid&gt;_hello.txt</code>, replacing <code>&lt;userid&gt;</code> with your actual user ID, e.g.&nbsp;<code>rca2t_hello.txt</code>.</p>
-<p>In the file, introduce yourself by answering the question: What is the most recent film you watched and enjoyed?</p>
-<p>Save the file.</p>
-<p><strong><em>Add</em></strong> <strong>and <em>commit</em> the changes you made.</strong></p>
-<p>Now do the following:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="op">&lt;</span>userid<span class="op">&gt;</span>_hello.txt</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Created file for class"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong><em>Push</em></strong> <strong>your new file to the repo on GitHub.</strong></p>
-<p>Since you have SSH set up, you can issue the following command without having to enter a password:</p>
-<!--
-Before proceeding, you will need to create personal access token to be able to write to your repo on GitHub. To get one, follow the instructions here --- [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
-
-Once you have created and copied your PAT to a safe place, do the following:
--->
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<!-- 
-When prompted for a password, use your PAT instead. 
-
-Note: A more efficient way to work with GitHub is to use SSH. You are free to use this option if you are comfortable following through with [the instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
--->
-<p><strong>Create a <em>Pull Request</em></strong></p>
-<p>Finally, make a pull request to have your file added to the original site. To do this, follow these steps:</p>
-<p>Click on the “Pull requests” menu item (see image below) on the web page for your repo.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../media/pull-request-button.jpg" class="img-fluid figure-img"></p>
-<figcaption>Image of pull request button on GitHub</figcaption>
-</figure>
-</div>
-<p>Click on the green “New pull request” button.</p>
-<p>Click on the green “Create pull request” button.</p>
-<p>Give the request the title “In-class activity” and then press the green “Create pull request” button at the bottom of the form.</p>
-<p>Now the ball is in the instructor’s court to merge the request with the original. If you put your file in the right place and named it properly, it will be merged.</p>
 </section>
-<section id="going-forward" class="level2">
-<h2 class="anchored" data-anchor-id="going-forward">Going Forward</h2>
-<p>During the semester, you will not be making pull requests to submit your work. We do it here to demonstrate the concept since it is so basic to working with GitHub in the real world.</p>
-<p>Instead of making pull requests, you will be using a separate repository for your work So, you will be working with two repositories going forard:</p>
-<ol type="1">
-<li><p><strong>The Course Repo</strong>, which is where you will find course materials, such as homework keys and exercises after the classes in which they are used. This should be <a href="https://ontoligent.github.io/DS5100-book/topics/refreshing-the-course-repo.html">updated each day</a>.</p></li>
-<li><p><strong>Your Assessments Repo</strong>, which is where you will be your finished work as assigned.</p></li>
-<li><p><strong>The Book Repo</strong>, which is where you will find the textbook for this course along with all of the notebooks in it. You may choose to clone or fork this, or you may download individual notebooks from the site as needed.</p></li>
-</ol>
+<section id="advanced" class="level2">
+<h2 class="anchored" data-anchor-id="advanced">Advanced</h2>
+<p>If there is time, you may get started on writing the classes themselves.</p>
+<p>Here are the instructions from the Final Project assignment that will be revealed in the next class.</p>
+</section>
+</section>
+<section id="class-definitions" class="level1">
+<h1>Class Definitions</h1>
+<p>The following class definitions provide blueprints for creating the classes for your simulator.</p>
+<p>Note that although these provide some specific instructions, some elements of your code are left to your interpretation.</p>
+<section id="the-die-class" class="level2">
+<h2 class="anchored" data-anchor-id="the-die-class">The Die class</h2>
+<section id="general-definition" class="level3">
+<h3 class="anchored" data-anchor-id="general-definition"><strong>General Definition</strong></h3>
+<ul>
+<li><p>A die has <span class="math inline">\(N\)</span> sides, or “faces”, and <span class="math inline">\(W\)</span> weights, and can be rolled to select a face.</p></li>
+<li><p>For example, a “die” with <span class="math inline">\(N = 2\)</span> is a coin, and a one with <span class="math inline">\(N = 6\)</span> is a standard die.</p></li>
+<li><p>Normally, dice and coins are “fair,” meaning that the each side has an equal weight. An unfair die is one where the weights are unequal.</p></li>
+<li><p>Each side contains a unique symbol. Symbols may be all alphabetic or all numeric.</p></li>
+<li><p><span class="math inline">\(W\)</span> defaults to <span class="math inline">\(1.0\)</span> for each face but can be changed after the object is created.</p></li>
+<li><p>The weights are just positive numbers (integers or floats, including <span class="math inline">\(0\)</span>), not a normalized probability distribution.</p></li>
+<li><p>The die has one behavior, which is to be rolled one or more times.</p></li>
+</ul>
+</section>
+<section id="specific-methods-and-attributes" class="level3">
+<h3 class="anchored" data-anchor-id="specific-methods-and-attributes"><strong>Specific Methods and Attributes</strong></h3>
+<p><strong>An initializer</strong>.</p>
+<ul>
+<li><p>Takes a NumPy array of faces as an argument. Throws a <code>TypeError</code> if not a NumPy array.</p></li>
+<li><p>The array’s data type <code>dtype</code> may be strings or numbers.</p></li>
+<li><p>The array’s values must be distinct. Tests to see if the values are distinct and raises a <code>ValueError</code> if not.</p></li>
+<li><p>Internally initializes the weights to <span class="math inline">\(1.0\)</span> for each face.</p></li>
+<li><p>Saves both faces and weights in a private data frame with faces in the index.</p></li>
+</ul>
+<p><strong>A method to change the weight of a single side.</strong></p>
+<ul>
+<li><p>Takes two arguments: the face value to be changed and the new weight.</p></li>
+<li><p>Checks to see if the face passed is valid value, i.e.&nbsp;if it is in the die array. If not, raises an <code>IndexError</code>.</p></li>
+<li><p>Checks to see if the weight is a valid type, i.e.&nbsp;if it is numeric (integer or float) or castable as numeric. If not, raises a <code>TypeError</code>.</p></li>
+</ul>
+<p><strong>A method to roll the die one or more times.</strong></p>
+<ul>
+<li><p>Takes a parameter of how many times the die is to be rolled; defaults to <span class="math inline">\(1\)</span>.</p></li>
+<li><p>This is essentially a random sample with replacement, from the private die data frame, that applies the weights.</p></li>
+<li><p>Returns a Python list of outcomes.</p></li>
+<li><p>Does not store internally these results.</p></li>
+</ul>
+<p><strong>A method to show the die’s current state.</strong></p>
+<ul>
+<li>Returns a copy of the private die data frame.</li>
+</ul>
+</section>
+</section>
+<section id="the-game-class" class="level2">
+<h2 class="anchored" data-anchor-id="the-game-class">The Game class</h2>
+<section id="general-definition-1" class="level3">
+<h3 class="anchored" data-anchor-id="general-definition-1">General Definition</h3>
+<ul>
+<li><p>A game consists of rolling of one or more similar dice (Die objects) one or more times.</p></li>
+<li><p>By similar dice, we mean that each die in a given game has the same number of sides and associated faces, but each die object may have its own weights.</p></li>
+<li><p>Each game is initialized with a Python list that contains one or more dice.</p></li>
+<li><p>Game objects have a behavior to play a game, i.e.&nbsp;to roll all of the dice a given number of times.</p></li>
+<li><p>Game objects only keep the results of their most recent play.</p></li>
+</ul>
+</section>
+<section id="specific-methods-and-attributes-1" class="level3">
+<h3 class="anchored" data-anchor-id="specific-methods-and-attributes-1">Specific Methods and Attributes</h3>
+<p><strong>An initializer</strong>.</p>
+<ul>
+<li><p>Takes a single parameter, a list of already instantiated similar dice.</p></li>
+<li><p>Ideally this would check if the list actually contains Die objects and that they all have the same faces, but this is not required for this project.</p></li>
+</ul>
+<p><strong>A play method.</strong></p>
+<ul>
+<li><p>Takes an integer parameter to specify how many times the dice should be rolled.</p></li>
+<li><p>Saves the result of the play to a private data frame.</p></li>
+<li><p>The data frame should be in wide format, i.e.&nbsp;have the roll number as a named index, columns for each die number (using its list index as the column name), and the face rolled in that instance in each cell.</p></li>
+</ul>
+<p><strong>A method to show the user the results of the most recent play.</strong></p>
+<ul>
+<li><p>This method just returns a copy of the private play data frame to the user.</p></li>
+<li><p> Takes a parameter to return the data frame in narrow or wide form which defaults to wide form.</p></li>
+<li><p>The narrow form will have a <code>MultiIndex</code>, comprising the roll number and the die number (in that order), and a single column with the outcomes (i.e.&nbsp;the face rolled).</p></li>
+<li><p>This method should raise a <code>ValueError</code> if the user passes an invalid option for narrow or wide.</p></li>
+</ul>
+</section>
+</section>
+<section id="the-analyzer-class" class="level2">
+<h2 class="anchored" data-anchor-id="the-analyzer-class">The Analyzer class</h2>
+<section id="general-definition-2" class="level3">
+<h3 class="anchored" data-anchor-id="general-definition-2">General Definition</h3>
+<p>An Analyzer object takes the results of a single game and computes various descriptive statistical properties about it.</p>
+</section>
+<section id="specific-methods-and-attributes-2" class="level3">
+<h3 class="anchored" data-anchor-id="specific-methods-and-attributes-2">Specific Methods and Attributes</h3>
+<p><strong>An initializer</strong>.</p>
+<ul>
+<li>Takes a game object as its input parameter. Throw a <code>ValueError</code> if the passed value is not a Game object.</li>
+</ul>
+<p><strong>A jackpot method.</strong></p>
+<ul>
+<li><p>A jackpot is a result in which all faces are the same, e.g.&nbsp;all ones for a six-sided die.</p></li>
+<li><p>Computes how many times the game resulted in a jackpot.</p></li>
+<li><p>Returns an integer for the number of jackpots.</p></li>
+</ul>
+<p><strong>A face counts per roll method.</strong></p>
+<ul>
+<li><p>Computes how many times a given face is rolled in each event. For example, if a roll of five dice has all sixes, then the counts for this roll would be <span class="math inline">\(5\)</span> for the face value <code>6</code> and <span class="math inline">\(0\)</span> for the other faces.</p></li>
+<li><p>Returns a data frame of results.</p></li>
+<li><p>The data frame has an index of the roll number, face values as columns, and count values in the cells (i.e.&nbsp;it is in wide format).</p></li>
+</ul>
+<p><strong>A combo count method.</strong></p>
+<ul>
+<li><p>Computes the distinct combinations of faces rolled, along with their counts.</p></li>
+<li><p>Combinations are order-independent and may contain repetitions.</p></li>
+<li><p>Returns a data frame of results.</p></li>
+<li><p>The data frame should have an MultiIndex of distinct combinations and a column for the associated counts.</p></li>
+</ul>
+<p><strong>An permutation count method.</strong></p>
+<ul>
+<li><p>Computes the distinct permutations of faces rolled, along with their counts.</p></li>
+<li><p>Permutations are order-dependent and may contain repetitions.</p></li>
+<li><p>Returns a data frame of results.</p></li>
+<li><p>The data frame should have an MultiIndex of distinct permutations and a column for the associated counts.</p></li>
+</ul>
+</section>
+</section>
+<section id="general-requirements-for-classes" class="level2">
+<h2 class="anchored" data-anchor-id="general-requirements-for-classes">General Requirements for Classes</h2>
+<ul>
+<li><p>All classes and methods must have appropriate docstrings.</p></li>
+<li><p>Class docstrings should describe the general purpose of the class.</p></li>
+<li><p>Method docstrings should describe the purpose of the method, any input arguments, any return values if applicable, and any changes to the object’s state that the user should know about.</p></li>
+<li><p>Input argument descriptions should describe data types and formats as well as any default values.</p></li>
+<li><p>You may use language included in this document to create these docstrings.</p></li>
+</ul>
 
 
 </section>
