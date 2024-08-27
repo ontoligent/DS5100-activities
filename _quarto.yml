@@ -1,13 +1,16 @@
 project:
   title: "{{< var site_title >}}"
-  output-dir: docs
   type: website
+  output-dir: docs
 
 website:
   title: "DS 5100 Activities"
   sidebar:
     style: "docked"
     search: true
+    page-navigation: true
+    repo-actions: [edit]
+    repo-url: "https://github.com/ontoligent/DS5100-activities" # Variable does not work here
     contents:
         - section: "M01"
           contents:
