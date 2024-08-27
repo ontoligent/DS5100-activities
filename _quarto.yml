@@ -5,12 +5,12 @@ project:
 
 website:
   title: "DS 5100 Activities"
+  repo-actions: [edit]
+  repo-url: "https://github.com/ontoligent/DS5100-activities" # Variable does not work here
   sidebar:
     style: "docked"
     search: true
     page-navigation: true
-    repo-actions: [edit]
-    repo-url: "https://github.com/ontoligent/DS5100-activities" # Variable does not work here
     contents:
         - section: "M01"
           contents:
