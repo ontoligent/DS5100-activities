@@ -23,7 +23,7 @@ Also, before you get started, follow [these instructions](https://ontoligent.git
 
 ***Fork*** **the course GitHub hosted repository ("repo") to your GitHub account.**
 
-Go to [{{< var github_url >}}]({{< var github_url >}}) in your web browser.
+Go to [{{< var github_url >}}](%7B%7B%3C%20var%20github_url%20%3E%7D%7D) in your web browser.
 
 ::: callout-note
 This is the course activities repo --- it will be used for activities and answer keys.
@@ -140,8 +140,8 @@ During the semester, you will not be making pull requests to submit your work. W
 
 Instead of making pull requests, you will be using a separate repository for your work So, you will be working with two repositories going forard:
 
-1.  **The Course Repo**, which is where you will find course materials, such as homework keys and exercises after the classes in which they are used. This should be [updated each day](https://ontoligent.github.io/DS5100-book/topics/refreshing-the-course-repo.html).
+1.  **The Course Activities Repo**, which is where you will find homework keys and exercises after the classes in which they are used. Update as necessary. We will also use this for some of the activities from the first modules.
 
-2.  **Your Assessments Repo**, which is where you will be your finished work as assigned.
+2.  **Your Assessments Repo**, which is where you will put your finished work as assigned.
 
 3.  **The Book Repo**, which is where you will find the textbook for this course along with all of the notebooks in it. You may choose to clone or fork this, or you may download individual notebooks from the site as needed.
