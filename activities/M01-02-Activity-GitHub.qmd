@@ -23,7 +23,7 @@ Also, before you get started, follow [these instructions](https://ontoligent.git
 
 ***Fork*** **the course GitHub hosted repository ("repo") to your GitHub account.**
 
-Go to [https://github.com/ontoligent/DS5100-activities](https://github.com/ontoligent/DS5100-activities) in your web browser.
+Go to <https://github.com/ontoligent/DS5100-activities> in your web browser.
 
 ::: callout-note
 This is the course activities repo --- it will be used for activities and answer keys.
@@ -50,7 +50,7 @@ Note: This requires that you have SSH set up.
 Then click on the copy icon and paste the value into the following command:
 
 ``` bashco
-git clone https://github.com:<github_user_name>/DS5100-activities.git
+git clone git@github.com:<github_user_name>/DS5100-activities.git
 ```
 
 ::: callout-important
