@@ -53,6 +53,8 @@ Then click on the copy icon and paste the value into the following command:
 git clone git@github.com:<github_user_name>/DS5100-activities.git
 ```
 
+g
+
 ::: callout-important
 Be sure to clone the repo from *your* GitHub account, replacing `<github_user_name>` with your GitHub user name. Do not just cut-and-paste the line above!
 :::
