@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DS 5100 Activities</title>
+<title>DS 5100 Activities - Hello Exercise</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,7 +57,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -100,6 +100,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -114,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/M01-01-Using-Rivanna.html">M01</a></li><li class="breadcrumb-item"><a href="../activities/M01-02-Activity-GitHub.html">Activity: Using Git and GitHub</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/M01-01-Using-Rivanna.html">M01</a></li><li class="breadcrumb-item"><a href="../activities/M01_ImportHello.html">Hello Exercise</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -156,13 +159,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/M01-02-Activity-GitHub.html" class="sidebar-item-text sidebar-link active">
+  <a href="../activities/M01-02-Activity-GitHub.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Activity: Using Git and GitHub</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/M01_ImportHello.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/M01_ImportHello.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Hello Exercise</span></a>
   </div>
 </li>
@@ -197,169 +200,203 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#activity-using-git-and-github" id="toc-activity-using-git-and-github" class="nav-link active" data-scroll-target="#activity-using-git-and-github">Activity: Using Git and GitHub</a>
-  <ul class="collapse">
-  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps">Steps</a></li>
-  <li><a href="#going-forward" id="toc-going-forward" class="nav-link" data-scroll-target="#going-forward">Going Forward</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ontoligent/DS5100-activities/edit/main/activities/M01-02-Activity-GitHub.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/M01-01-Using-Rivanna.html">M01</a></li><li class="breadcrumb-item"><a href="../activities/M01_ImportHello.html">Hello Exercise</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Hello Exercise</h1>
+</div>
 
 
 
-<section id="activity-using-git-and-github" class="level1">
-<h1>Activity: Using Git and GitHub</h1>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Goal:</strong> Use Git and GitHub to put course materials on your Rivanna account.</p>
-</div>
-</div>
-</div>
-<p>In this activity, you will go through steps of using Git and GitHub covered in <a href="https://ontoligent.github.io/DS5100-book/topics/git-and-github.html">the reading on GitHub</a>. At this point, you also should be able check off the following items:</p>
-<ul>
-<li>Understand the difference between Git and GitHub.</li>
-<li>Understand the purpose of Git and Github for data science work.</li>
-<li>Ensure Git is installed on your computer.</li>
-<li>Understand how to find a repository on GitHub.</li>
-</ul>
-<p>Let’s apply and extend this knowledge now with our course repo.</p>
-<p>Be sure you are inside the course directory on Rivanna we created earlier.</p>
-<p>We assume you have already created a GitHub account.</p>
-<p>Also, before you get started, follow <a href="https://ontoligent.github.io/DS5100-book/topics/setting-up-ssh.html">these instructions</a> to set an SSH key. You can create this on both your computer and Rivanna, but for the assignment you need only create it on Rivanna.</p>
-<section id="steps" class="level2">
-<h2 class="anchored" data-anchor-id="steps">Steps</h2>
-<p><strong><em>Fork</em></strong> <strong>the course GitHub hosted repository (“repo”) to your GitHub account.</strong></p>
-<p>Go to <a href="https://github.com/ontoligent/DS5100-activities" class="uri">https://github.com/ontoligent/DS5100-activities</a> in your web browser.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is the course activities repo — it will be used for activities and answer keys.</p>
-</div>
-</div>
-<p>Click on the Fork icon in the upper right and follow the prompts to finish the process.</p>
-<p>You should end up at the web page of your newly forked repo.</p>
-<p>You will now have a copy of the repo in your GitHub account.</p>
-<p><strong><em>Clone</em></strong> <strong>the forked repo for this course inside of your course directory on Rivanna.</strong></p>
-<p>Find the green Code button and click on it. You should see something like this:</p>
-<p><img src="../media/git-clone.png" height="400"></p>
-<p>Make sure you have selected the SSH option.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Note: This requires that you have SSH set up.</p>
-</div>
-</div>
-<p>Then click on the copy icon and paste the value into the following command:</p>
-<pre class="bashco"><code>git clone git@github.com:&lt;github_user_name&gt;/DS5100-activities.git</code></pre>
-<p>g</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be sure to clone the repo from <em>your</em> GitHub account, replacing <code>&lt;github_user_name&gt;</code> with your GitHub user name. Do not just cut-and-paste the line above!</p>
-</div>
-</div>
-<p>You now have a copy the course repo to your account on Rivanna.</p>
-<p>This will be the directory you created in your pre-class activities under Documents/.</p>
-<p><strong><em>Create</em></strong> <strong>a new file in your newly cloned repo.</strong></p>
-<p>Go to your command line window on Rivanna.</p>
-<p>Use <code>cd</code> to move into the directory just created by the clone operation.</p>
-<p>Move into the directory <code>activities/hello</code></p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Make sure you are in this directory before proceeding.</p>
-</div>
-</div>
-<p>If you get lost – for example if you moved around the file system before this step – you can cd to the absolute path:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Documents/MSDS/DS5100/DS5100-activities/activities/hello </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note that the tilde sign <code>~</code> stands for the path to your home directory.</p>
-<p>Using the file editor on Rivanna, create and save new file called <code>&lt;userid&gt;_hello.txt</code>, replacing <code>&lt;userid&gt;</code> with your actual user ID, e.g.&nbsp;<code>rca2t_hello.txt</code>.</p>
-<p>In the file, introduce yourself by answering the question: What is the most recent film you watched and enjoyed?</p>
-<p>Save the file.</p>
-<p><strong><em>Add</em></strong> <strong>and <em>commit</em> the changes you made.</strong></p>
-<p>Now do the following:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="op">&lt;</span>userid<span class="op">&gt;</span>_hello.txt</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Created file for class"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong><em>Push</em></strong> <strong>your new file to the repo on GitHub.</strong></p>
-<p>Since you have SSH set up, you can issue the following command without having to enter a password:</p>
-<!--
-Before proceeding, you will need to create personal access token to be able to write to your repo on GitHub. To get one, follow the instructions here --- [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+<div class="quarto-title-meta">
 
-Once you have created and copied your PAT to a safe place, do the following:
--->
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<!-- 
-When prompted for a password, use your PAT instead. 
-
-Note: A more efficient way to work with GitHub is to use SSH. You are free to use this option if you are comfortable following through with [the instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
--->
-<p><strong>Create a <em>Pull Request</em></strong></p>
-<p>Finally, make a pull request to have your file added to the original site. To do this, follow these steps:</p>
-<p>Click on the “Pull requests” menu item (see image below) on the web page for your repo.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../media/pull-request-button.jpg" class="img-fluid figure-img"></p>
-<figcaption>Image of pull request button on GitHub</figcaption>
-</figure>
-</div>
-<p>Click on the green “New pull request” button.</p>
-<p>Click on the green “Create pull request” button.</p>
-<p>Give the request the title “In-class activity” and then press the green “Create pull request” button at the bottom of the form.</p>
-<p>Now the ball is in the instructor’s court to merge the request with the original. If you put your file in the right place and named it properly, it will be merged.</p>
-</section>
-<section id="going-forward" class="level2">
-<h2 class="anchored" data-anchor-id="going-forward">Going Forward</h2>
-<p>During the semester, you will not be making pull requests to submit your work. We do it here to demonstrate the concept since it is so basic to working with GitHub in the real world.</p>
-<p>Instead of making pull requests, you will be using a separate repository for your work So, you will be working with two repositories going forard:</p>
-<ol type="1">
-<li><p><strong>The Course Activities Repo</strong>, which is where you will find homework keys and exercises after the classes in which they are used. Update as necessary. We will also use this for some of the activities from the first modules.</p></li>
-<li><p><strong>Your Assessments Repo</strong>, which is where you will put your finished work as assigned.</p></li>
-<li><p><strong>The Book Repo</strong>, which is where you will find the textbook for this course along with all of the notebooks in it. You may choose to clone or fork this, or you may download individual notebooks from the site as needed.</p></li>
-</ol>
+    
+  
+    
+  </div>
+  
 
 
-</section>
-</section>
+</header>
+
+
+<p>Students fork and clone the course repo, then create a file in a specified directory of their local repo.</p>
+<p>After that they push it to the remote and then initiate a pull request.</p>
+<p>These requests are merged and then pulled locally here.</p>
+<p>The results are aggregated and printed below.</p>
+<div id="aaaaa06a-7fd7-483b-8707-0fd4b3231363" class="cell" data-tags="[]" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> glob</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="1f71bcb5-9fbf-41ea-ba8d-8b8ad0019e0b" class="cell" data-tags="[]" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> []</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>files <span class="op">=</span> glob.glob(<span class="st">"./hello/*_*.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="05b45ad7-d400-4e55-8eb4-da0cc7d851f8" class="cell" data-tags="[]" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>files[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>'./hello/hm7qgr_hello.txt'</code></pre>
+</div>
+</div>
+<div id="70f85b50-7275-4819-b0ac-566ffc84d24b" class="cell" data-tags="[]" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(files))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>18</code></pre>
+</div>
+</div>
+<div id="3576e753-ce37-409d-ae52-9c3a6dd22834" class="cell" data-tags="[]" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>n_students <span class="op">=</span> <span class="dv">67</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="e2f371fc-53e6-4053-b4a2-0bce5f4ebd58" class="cell" data-tags="[]" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>n_students <span class="op">-</span> <span class="bu">len</span>(files)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>49</code></pre>
+</div>
+</div>
+<div id="4a44ab38-4c3e-4e17-a5cc-da98f8a84f0d" class="cell" data-tags="[]" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, <span class="bu">file</span> <span class="kw">in</span> <span class="bu">enumerate</span>(files):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    sid <span class="op">=</span> <span class="bu">file</span>.split(<span class="st">"/"</span>)[<span class="dv">2</span>].split(<span class="st">"_"</span>)[<span class="dv">0</span>]</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> <span class="bu">open</span>(<span class="bu">file</span>, <span class="st">'r'</span>).read().strip()</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    row <span class="op">=</span> (sid, line.replace(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>, <span class="st">' '</span>))</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    data.append(row)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="844d664a-9b5b-4d0f-93a0-c59e6ef621dd" class="cell" data-tags="[]" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>[('hm7qgr',
+  'I recently watched Inside Out 2 with a friend and enjoyed it since it had been a while since the first movie came out and the movie touched on the emotion, anxiety.'),
+ ('vsr9awc',
+  'The most recent film that I watched and enjoyed was Little Women. I watched it on the plane to Italy!'),
+ ('rpk3ve', 'The most recent film I watched and enjoyed is Exhuma.'),
+ ('twf9xn',
+  'Question: In the file, introduce yourself by answering the question: What is the most recent film you watched and enjoyed? Answer: Lover Come Back (1962)'),
+ ('mhe3sy',
+  'What is the most recent film you watched and enjoyed?  Most recently I watched an Indian movie called Srikanth, a story of blind man from poor family who became a successful business.'),
+ ('zh2yn', 'The last movie I watched was "Mission Impossible: Rogue Nation"'),
+ ('mm3dc', 'The most recent film I watched was Crew.'),
+ ('bmw8pt',
+  'Q: What is the most recent film you watched and enjoyed?  A: Dune Part 2'),
+ ('epx8hh',
+  "Created a new file with nano! Hello! A recent movie I watched was a horror movie and I can't recall the name!"),
+ ('dnb7rz', 'Ghostbusters - Frozen Empire.  Fun mainstream movie.'),
+ ('bnolton',
+  "Hello, my name is Brian Nolton. I have a daughter who is almost 1 so I have not watched much of anything lately. I guess I'll say 'The Beekeeper.' I only watched that becuase I had time on an airplane..."),
+ ('sc8rg', 'The last film I watched was the horror/thriller movie Smile'),
+ ('rzq2rk',
+  'The most recent film I watched and enjoyed is Shang-Chi and the Legend of the Ten Rings.'),
+ ('ywe4kw',
+  "Hello! I've recently been watching through House of the Dragon. I'm about to finish season 1!"),
+ ('bat7kt',
+  'I recently watched Jurassic Park, the original. Just as good as I remember it from years ago. Jeff Goldblum is, uhh, INCREDIBLE.'),
+ ('nwiradiradja',
+  'The most recent film I watched and enjoyed was Now you see me 2'),
+ ('cej2vh',
+  "The most recent film I watched and enjoyed was a rewatch of Robert Zemeckis's 1992 classic, Death Becomes Her."),
+ ('wpl3a', 'I have not seen a film recently.')]</code></pre>
+</div>
+</div>
+<div id="d639031b-10ed-47ad-a3fd-87ddc9c91d74" class="cell" data-tags="[]" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data, columns<span class="op">=</span>[<span class="st">'user_id'</span>,<span class="st">'comment'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="10a21388-8fb6-499f-b7d0-b234de14218d" class="cell" data-tags="[]" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">user_id</th>
+<th data-quarto-table-cell-role="th">comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>hm7qgr</td>
+<td>I recently watched Inside Out 2 with a friend ...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>vsr9awc</td>
+<td>The most recent film that I watched and enjoye...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>rpk3ve</td>
+<td>The most recent film I watched and enjoyed is ...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>twf9xn</td>
+<td>Question: In the file, introduce yourself by a...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>mhe3sy</td>
+<td>What is the most recent film you watched and e...</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<div id="5cebfb75-8ab2-4021-a88d-ef7f20e568c5" class="cell" data-tags="[]" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">"movies.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="9ec8280b-a44b-4cfa-bd40-9188012fa5a2" class="cell" data-tags="[]" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, r <span class="kw">in</span> <span class="bu">enumerate</span>(df.user_id <span class="op">+</span> <span class="st">' | '</span> <span class="op">+</span> df.comment):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="bu">str</span>(i).zfill(<span class="dv">2</span>), <span class="st">"| "</span> <span class="op">+</span> r <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>00 | hm7qgr | I recently watched Inside Out 2 with a friend and enjoyed it since it had been a while since the first movie came out and the movie touched on the emotion, anxiety.
+
+01 | vsr9awc | The most recent film that I watched and enjoyed was Little Women. I watched it on the plane to Italy!
+
+02 | rpk3ve | The most recent film I watched and enjoyed is Exhuma.
+
+03 | twf9xn | Question: In the file, introduce yourself by answering the question: What is the most recent film you watched and enjoyed? Answer: Lover Come Back (1962)
+
+04 | mhe3sy | What is the most recent film you watched and enjoyed?  Most recently I watched an Indian movie called Srikanth, a story of blind man from poor family who became a successful business.
+
+05 | zh2yn | The last movie I watched was "Mission Impossible: Rogue Nation"
+
+06 | mm3dc | The most recent film I watched was Crew.
+
+07 | bmw8pt | Q: What is the most recent film you watched and enjoyed?  A: Dune Part 2
+
+08 | epx8hh | Created a new file with nano! Hello! A recent movie I watched was a horror movie and I can't recall the name!
+
+09 | dnb7rz | Ghostbusters - Frozen Empire.  Fun mainstream movie.
+
+10 | bnolton | Hello, my name is Brian Nolton. I have a daughter who is almost 1 so I have not watched much of anything lately. I guess I'll say 'The Beekeeper.' I only watched that becuase I had time on an airplane...
+
+11 | sc8rg | The last film I watched was the horror/thriller movie Smile
+
+12 | rzq2rk | The most recent film I watched and enjoyed is Shang-Chi and the Legend of the Ten Rings.
+
+13 | ywe4kw | Hello! I've recently been watching through House of the Dragon. I'm about to finish season 1!
+
+14 | bat7kt | I recently watched Jurassic Park, the original. Just as good as I remember it from years ago. Jeff Goldblum is, uhh, INCREDIBLE.
+
+15 | nwiradiradja | The most recent film I watched and enjoyed was Now you see me 2
+
+16 | cej2vh | The most recent film I watched and enjoyed was a rewatch of Robert Zemeckis's 1992 classic, Death Becomes Her.
+
+17 | wpl3a | I have not seen a film recently.
+</code></pre>
+</div>
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -776,4 +813,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ontoligent/DS5100-activities/edit/main/activities/M01-02-Activity-GitHub.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.dev/ontoligent/DS5100-activities/blob/main/activities/M01_ImportHello.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
