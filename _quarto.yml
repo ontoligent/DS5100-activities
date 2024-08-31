@@ -16,6 +16,7 @@ website:
           contents:
             - "activities/M01-01-Using-Rivanna.qmd"
             - "activities/M01-02-Activity-GitHub.qmd"
+            - activities/M01_ImportHello.ipynb
         - section: "M02"
           contents:
           - "activities/M02-01-Activity-Hello-World.qmd"
