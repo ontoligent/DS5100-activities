@@ -7,7 +7,7 @@ Go the OnDemand site to access Rivanna. As a reminder, the URL is <https://rivan
 From the Interactive Apps menu, select JupyterLab and fill out the form to initiate a new session. Your form should have the following values:
 
 ::: {style="border: 1px solid gray;"}
-![](../media/jupyter-on-rivanna-form.png)
+![](../media/jupyter-on-rivanna-form.png){fig-align="center"}
 :::
 
 ::: callout-tip
@@ -16,7 +16,7 @@ Note that you may increase the number of hours, cores, and megabytes of RAM, but
 
 Once the session is ready, launch the notebook.
 
-Once you are in the notebook, use file system tab on the left to get to the directory of your personal assessments repo. Remember, you created two repos for this class --- one for course content from the instructor, and one for your own course work. Use the latter for this exercise.
+Once you are in the notebook, use the file system tab on the left to get to the directory of your personal assessments repo. Remember, you created two repos for this class --- one for course content from the instructor, and one for your own course work. Use the latter for this exercise.
 
 In a code cell in the notebook, enter the code to print `"Hello, World!"`, and run the cell.
 
